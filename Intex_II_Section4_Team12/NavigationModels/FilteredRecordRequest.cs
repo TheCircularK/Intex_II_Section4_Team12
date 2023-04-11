@@ -7,29 +7,36 @@
             PageNum = pageNum;
         }
 
-        public List<long>? TextileStructureIds { get; set; } = new();
         public List<string>? Sexes { get; set; } = new();
 
         public float? MinBurialDepth { get; set; } = new();
         public float? MaxBurialDepth { get; set; } = new();
 
-        public int? MinEstimateStature { get; set; } = new();
-        public int? MaxEstimateStature { get; set; } = new();
+        public string? MinEstimateStature { get; set; }
 
         public int? MinAgeAtDeath { get; set; } = new();
         public int? MaxAgeAtDeath { get; set; } = new();
 
         public List<string>? HeadDirections { get; set; } = new();
 
-        public string? SquareNorthSouth { get; set; } = "";
-        public string? NorthSouth { get; set; } = "";
-        public string? SquareEastWest { get; set; } = "";
-        public string? EastWest { get; set; } = "";
-        public string? BurialNumber { get; set; } = "";
-
-        public List<string>? TextileFunctions { get; set; } = new();
+        public string? BurialId { get; set; }
 
         public List<string>? HairColors { get; set; } = new();
+
+        //Burial main - Y/N
+        public string? FaceBundles { get; set; }
+
+        //LIKE statement
+        public string? TextileStructure { get; set; }
+
+        //Textile color - LIKE
+        public string? TextileColor { get; set; }
+
+        //Presence of ribbons - TEXTILE DESCRIPTION CONTAINS RIBBONS!!!
+        public bool? ContainsRibbons { get; set; }
+
+        //Like statement
+        public string? TextileFunction { get; set; }
 
         public int PageNum { get; set; }
     }

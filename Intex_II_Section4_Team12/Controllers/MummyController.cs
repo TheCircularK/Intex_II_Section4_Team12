@@ -15,7 +15,7 @@ namespace Intex_S4T12_Api.Controllers
         private IMummyRepository _repo;
 
         //All records paginated
-        [HttpGet("all/{pageNum}", Name = "GetAllRecords")]
+        [HttpGet]
         public ICollection<Burialmain> GetAllBurials(int pageNum)
         {
 

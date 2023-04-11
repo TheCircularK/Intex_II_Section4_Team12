@@ -171,7 +171,9 @@ namespace Intex_II_Section4_Team12.Context
 
             modelBuilder.Entity<Bodyanalysischart>(entity =>
             {
-                entity.HasNoKey();
+                entity.Property(e => e.Id)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("id");
 
                 entity.ToTable("bodyanalysischart");
 
@@ -770,6 +772,9 @@ namespace Intex_II_Section4_Team12.Context
                     .HasColumnName("sampledate");
 
                 entity.Property(e => e.Textileid).HasColumnName("textileid");
+
+                entity.HasMany(t => t.MainStructures)
+                    .WithMany(s => s.MainTextiles);
             });
 
             modelBuilder.Entity<Textilefunction>(entity =>
