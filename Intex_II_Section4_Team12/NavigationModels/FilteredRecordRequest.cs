@@ -12,10 +12,9 @@
         public float? MinBurialDepth { get; set; } = new();
         public float? MaxBurialDepth { get; set; } = new();
 
-        public string? MinEstimateStature { get; set; }
+        public string? EstimateStature { get; set; }
 
-        public int? MinAgeAtDeath { get; set; } = new();
-        public int? MaxAgeAtDeath { get; set; } = new();
+        public List<string>? AgeAtDeath { get; set; } = new();
 
         public List<string>? HeadDirections { get; set; } = new();
 

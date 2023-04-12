@@ -7,10 +7,7 @@ namespace Intex_II_Section4_Team12.Repositories
 {
     public interface IMummyRepository
     {
-        //Paged all
         ICollection<Burialmain> GetAllPaged(int pageNum);
-        //Filtered
-        ICollection<Burialmain> GetFiltered(FilteredRecordRequest request);
-
+        FilteredRecordsWithPages GetFiltered(FilteredRecordRequest request);
     }
 }

@@ -17,6 +17,11 @@ namespace Intex_II_Section4_Team12.Repositories
         private readonly MummyContext _context;
         private int pageSize = 10;
 
+        /// <summary>
+        /// Get all 
+        /// </summary>
+        /// <param name="pageNum"></param>
+        /// <returns></returns>
         public ICollection<Burialmain> GetAllPaged(int pageNum = 1)
         {
             if (pageNum == 0) { pageNum = 1; }
@@ -26,12 +31,14 @@ namespace Intex_II_Section4_Team12.Repositories
             var burials = _context.Burialmains
                 .Skip(numToSkip)
                 .Take(pageSize)
+                .Where(b => b.MainTextiles.Count > 0)
+                .Include(b => b.MainTextiles)
                 .ToList();
 
             return burials;
         }
 
-        public ICollection<Burialmain> GetFiltered(FilteredRecordRequest request)
+        public FilteredRecordsWithPages GetFiltered(FilteredRecordRequest request)
         {
             IQueryable<Burialmain> burials;
 
@@ -64,8 +71,63 @@ namespace Intex_II_Section4_Team12.Repositories
                     .Where(b => float.Parse(b.Depth) <= request.MaxBurialDepth);
             }
 
+            //Age at Death
+            if (request.AgeAtDeath.Count > 0)
+            {
+                burials = burials
+                    .Where(b => request.AgeAtDeath.Contains(b.Ageatdeath)); 
+            }
 
-            return new List<Burialmain>();
+            //Head direction
+            if (request.HeadDirections.Count > 0)
+            {
+                burials = burials
+                    .Where(b => request.HeadDirections.Contains(b.Headdirection));
+            }
+
+            //Hair colors
+            if (request.HairColors.Count > 0)
+            {
+                burials = burials
+                    .Where(b => request.HairColors.Contains(b.Haircolor));
+            }
+
+            //Face bundles
+            if (request.FaceBundles != null)
+            {
+                burials = burials
+                    .Where(b => b.Facebundles == request.FaceBundles);
+            }
+
+            //TEXTILE FUNCTIONS
+            //Get list of IDs so far
+            var burialIds = burials.Select(b => b.Id).ToList();
+
+
+
+            //Stature
+            if (!String.IsNullOrEmpty(request.EstimateStature))
+            {
+                burials = burials
+                    .Where(b => b.BodyAnalysisCharts
+                    .Any(c => c.EstimateStature
+                    .Contains(request.EstimateStature)));
+            }
+
+
+
+            //Burial ID
+            if (!String.IsNullOrEmpty(request.BurialId))
+            {
+                burials = burials
+                    .Where(b => (b.Squarenorthsouth + b.Northsouth + b.Squareeastwest + b.Eastwest + b.Area + b.Burialnumber) == request.BurialId);
+            }
+
+
+
+            FilteredRecordsWithPages response = new FilteredRecordsWithPages(burials.ToList(), request.PageNum, burials.Count()/pageSize);
+
+            return response;
 
         }
 

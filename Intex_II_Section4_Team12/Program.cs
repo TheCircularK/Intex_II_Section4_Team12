@@ -1,8 +1,10 @@
 using Intex_II_Section4_Team12.Context;
 using Intex_II_Section4_Team12.Data;
 using Intex_II_Section4_Team12.Repositories;
+using Microsoft.AspNetCore.Http.Json;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,8 +26,11 @@ var mummyConnectionString = builder.Configuration.GetConnectionString("MummyConn
 builder.Services.AddDbContext<MummyContext>(options =>
     options.UseNpgsql(mummyConnectionString));
 
+
 //Scoped services
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 builder.Services.AddScoped<IMummyRepository, MummyRepository>();
 
 var app = builder.Build();
