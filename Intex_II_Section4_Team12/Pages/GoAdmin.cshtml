@@ -1,0 +1,21 @@
+﻿@page
+@model Intex_II_Section4_Team12.Pages.GoAdminModel
+@{
+}
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label for="email">User Email</label>
+        <input type="email" class="form-control" id="email" name="email" asp-for="Email" />
+    </div>
+    <div class="form-group">
+        <label for="role">Desired Role</label>
+        <select class="form-control" id="role" name="role" asp-for="Role">
+            <option value="Admin">Admin</option>
+            <option value="Researcher">Researcher</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Role</button>
+</form>
+

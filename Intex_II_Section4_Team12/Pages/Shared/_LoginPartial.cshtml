@@ -2,25 +2,32 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-<ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
-    </li>
-    <li class="nav-item">
-        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post" >
-            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-        </form>
-    </li>
+    <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+        <div class="ast-builder-layout-element site-header-focus-item ast-header-account"
+                data-section="section-header-account">
+            <div class="ast-header-account-wrap">
+                <a class="ast-header-account-link ast-header-account-type-text ast-account-action-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+                <span>&nbsp;|&nbsp;</span>
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                    <button type="submit" class="ast-header-account-link ast-header-account-type-text ast-account-action-link">Logout</button>
+                </form>
+            </div>
+        </div>
+    </div>
 }
 else
 {
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
+    <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+        <div class="ast-builder-layout-element site-header-focus-item ast-header-account"
+                data-section="section-header-account">
+            <div class="ast-header-account-wrap">
+                <a class="ast-header-account-link ast-header-account-type-text ast-account-action-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                <span>&nbsp;|&nbsp;</span>
+                <a class="ast-header-account-link ast-header-account-type-text ast-account-action-link" asp-area="Identity" asp-page="/Account/Login"> Login</a>
+            </div>
+        </div>
+    </div>
+
 }
-</ul>
