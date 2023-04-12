@@ -85,4 +85,6 @@ app.UseEndpoints(endpoints =>
 
 app.MapRazorPages();
 
+app.UseHsts();
+
 app.Run();
