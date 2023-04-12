@@ -30,7 +30,7 @@ namespace Intex_S4T12_Api.Controllers
         [HttpGet("record/{burialId}", Name = "GetBurialRecord")]
         public Burialmain GetBurialInfo(int burialId)
         {
-            return null;
+            return _repo.GetRecord(burialId);
         }
     }
 }

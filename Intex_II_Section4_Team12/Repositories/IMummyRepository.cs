@@ -9,5 +9,6 @@ namespace Intex_II_Section4_Team12.Repositories
     {
         ICollection<Burialmain> GetAllPaged(int pageNum);
         FilteredRecordsWithPages GetFiltered(FilteredRecordRequest request);
+        Burialmain GetRecord(int recordId);
     }
 }

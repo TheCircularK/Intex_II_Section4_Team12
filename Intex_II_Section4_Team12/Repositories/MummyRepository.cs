@@ -17,8 +17,22 @@ namespace Intex_II_Section4_Team12.Repositories
         private readonly MummyContext _context;
         private int pageSize = 50;
 
+        public Burialmain GetRecord(int recordId)
+        {
+            return _context
+                .Burialmains
+                .Include(b => b.BodyAnalysisCharts)
+                .Include(b => b.MainTextiles)
+                    .ThenInclude(t => t.MainStructures)
+                .Include(b => b.MainTextiles)
+                    .ThenInclude(t => t.MainTextilefunctions)
+                .Include(b => b.MainTextiles)
+                    .ThenInclude(t => t.MainColors)
+                .SingleOrDefault(b => b.Id == recordId);
+        }
+
         /// <summary>
-        /// Get all 
+        /// Get all records with attached entities.
         /// </summary>
         /// <param name="pageNum"></param>
         /// <returns></returns>
@@ -37,7 +51,6 @@ namespace Intex_II_Section4_Team12.Repositories
                     .ThenInclude(t => t.MainTextilefunctions)
                 .Include(b => b.MainTextiles)
                     .ThenInclude(t => t.MainColors)
-                .Include(b => b.BodyAnalysisCharts)
                 .ToList();
 
             return burials;
@@ -55,8 +68,7 @@ namespace Intex_II_Section4_Team12.Repositories
                 .Include(b => b.MainTextiles)
                     .ThenInclude(t => t.MainTextilefunctions)
                 .Include(b => b.MainTextiles)
-                    .ThenInclude(t => t.MainColors)
-                .Include(b => b.BodyAnalysisCharts);
+                    .ThenInclude(t => t.MainColors);
 
             //FILTERS
             //Sex
