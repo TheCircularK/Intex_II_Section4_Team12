@@ -53,7 +53,7 @@ app.Use(async (context, next) =>
 {
     context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; connect-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; frame-src 'self';");
     await next();
-}
+});
 
 // Admin Account Setup
 using (var scope = app.Services.CreateScope())
