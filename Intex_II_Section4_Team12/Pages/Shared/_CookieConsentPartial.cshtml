@@ -12,10 +12,20 @@
     var cookieString = consentFeature?.CreateConsentCookie();
 }
 
+<style>
+    .textstyle{
+        margin-left:2%;
+        margin-right:2%;
+    }
+    .linkcolor{
+        color:orange
+    }
+</style>
+
 @if (showBanner)
 {
-    <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
-        We use cookies to provide you with the best experience on our website, in compliance with GDPR regulations, by accepting, you consent to the use of all cookies as described in our privacy policy <a asp-page="/Privacy">Learn More</a>.
+    <div id="cookieConsent" class="textstyle" role="alert">
+        We use cookies to provide you with the best experience on our website, in compliance with GDPR regulations, by accepting, you consent to the use of all cookies as described in our privacy policy <a class="linkcolor" asp-page="/Privacy">Learn More</a>.
         <button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">
             <span aria-hidden="true">Accept</span>
         </button>
