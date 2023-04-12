@@ -3,50 +3,1033 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Intex_II_Section4_Team12</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Intex_II_Section4_Team12.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - MummiesRUs</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    @*<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />*@
+    @RenderSection("Head", required:false)
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Intex_II_Section4_Team12</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
+<body
+    itemtype="https://schema.org/WebPage"
+    itemscope="itemscope"
+    class="home page-template page-template-elementor_header_footer page page-id-23 wp-custom-logo edd-js-none ast-desktop ast-page-builder-template ast-no-sidebar astra-4.1.3 ast-single-post ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header elementor-default elementor-template-full-width elementor-kit-25 elementor-page elementor-page-23"
+    >
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewbox="0 0 0 0"
+         width="0"
+         height="0"
+         focusable="false"
+         role="none"
+         style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <fecolormatrix color-interpolation-filters="sRGB"
+                               type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix>
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr>
+                    <fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg>
+                    <fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb>
+                    <fefunca type="table" tablevalues="1 1"></fefunca>
+                </fecomponenttransfer>
+                <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewbox="0 0 0 0"
+         width="0"
+         height="0"
+         focusable="false"
+         role="none"
+         style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <fecolormatrix color-interpolation-filters="sRGB"
+                               type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix>
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0 1"></fefuncr>
+                    <fefuncg type="table" tablevalues="0 1"></fefuncg>
+                    <fefuncb type="table" tablevalues="0 1"></fefuncb>
+                    <fefunca type="table" tablevalues="1 1"></fefunca>
+                </fecomponenttransfer>
+                <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewbox="0 0 0 0"
+         width="0"
+         height="0"
+         focusable="false"
+         role="none"
+         style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <fecolormatrix color-interpolation-filters="sRGB"
+                               type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix>
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table"
+                             tablevalues="0.54901960784314 0.98823529411765"></fefuncr>
+                    <fefuncg type="table" tablevalues="0 1"></fefuncg>
+                    <fefuncb type="table"
+                             tablevalues="0.71764705882353 0.25490196078431"></fefuncb>
+                    <fefunca type="table" tablevalues="1 1"></fefunca>
+                </fecomponenttransfer>
+                <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewbox="0 0 0 0"
+         width="0"
+         height="0"
+         focusable="false"
+         role="none"
+         style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <fecolormatrix color-interpolation-filters="sRGB"
+                               type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix>
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0 1"></fefuncr>
+                    <fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg>
+                    <fefuncb type="table"
+                             tablevalues="0.5921568627451 0.27843137254902"></fefuncb>
+                    <fefunca type="table" tablevalues="1 1"></fefunca>
+                </fecomponenttransfer>
+                <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewbox="0 0 0 0"
+         width="0"
+         height="0"
+         focusable="false"
+         role="none"
+         style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <fecolormatrix color-interpolation-filters="sRGB"
+                               type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix>
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0 0"></fefuncr>
+                    <fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg>
+                    <fefuncb type="table" tablevalues="0 1"></fefuncb>
+                    <fefunca type="table" tablevalues="1 1"></fefunca>
+                </fecomponenttransfer>
+                <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewbox="0 0 0 0"
+         width="0"
+         height="0"
+         focusable="false"
+         role="none"
+         style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <fecolormatrix color-interpolation-filters="sRGB"
+                               type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix>
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr>
+                    <fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg>
+                    <fefuncb type="table"
+                             tablevalues="0.35294117647059 0.47058823529412"></fefuncb>
+                    <fefunca type="table" tablevalues="1 1"></fefunca>
+                </fecomponenttransfer>
+                <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewbox="0 0 0 0"
+         width="0"
+         height="0"
+         focusable="false"
+         role="none"
+         style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <fecolormatrix color-interpolation-filters="sRGB"
+                               type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix>
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table"
+                             tablevalues="0.65098039215686 0.40392156862745"></fefuncr>
+                    <fefuncg type="table" tablevalues="0 1"></fefuncg>
+                    <fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb>
+                    <fefunca type="table" tablevalues="1 1"></fefunca>
+                </fecomponenttransfer>
+                <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewbox="0 0 0 0"
+         width="0"
+         height="0"
+         focusable="false"
+         role="none"
+         style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <fecolormatrix color-interpolation-filters="sRGB"
+                               type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix>
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr>
+                    <fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg>
+                    <fefuncb type="table"
+                             tablevalues="0.84705882352941 0.41960784313725"></fefuncb>
+                    <fefunca type="table" tablevalues="1 1"></fefunca>
+                </fecomponenttransfer>
+                <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+            </filter>
+        </defs>
+    </svg>
+    <style>
+        .edd-js-none .edd-has-js,
+        .edd-js .edd-no-js,
+        body.edd-js input.edd-no-js {
+            display: none;
+        }
+    </style>
+    <script>
+              /* <![CDATA[ */ (function () {
+            var c = document.body.classList;
+            c.remove("edd-js-none");
+            c.add("edd-js");
+        })(); /* ]]> */
+    </script>
+    <a class="skip-link screen-reader-text"
+       href="#content"
+       role="link"
+       title="Skip to content">
+        Skip to content
+    </a>
+    <div class="hfeed site" id="page">
+        <header class="site-header header-main-layout-1 ast-primary-menu-enabled ast-logo-title-inline ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline"
+                id="masthead"
+                itemtype="https://schema.org/WPHeader"
+                itemscope="itemscope"
+                itemid="#masthead">
+            <div id="ast-desktop-header" data-toggle-type="dropdown">
+                <div class="ast-main-header-wrap main-header-bar-wrap">
+                    <div class="ast-primary-header-bar ast-primary-header main-header-bar site-header-focus-item"
+                         data-section="section-primary-header-builder">
+                        <div class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container"
+                             data-section="section-primary-header-builder">
+                            <div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
+                                <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
+                                    <div class="ast-builder-layout-element ast-flex site-header-focus-item"
+                                         data-section="title_tagline">
+                                        <div class="site-branding ast-site-identity"
+                                             itemtype="https://schema.org/Organization"
+                                             itemscope="itemscope">
+                                            <span class="site-logo-img">
+                                                <a href="./index.html"
+                                                   class="custom-logo-link"
+                                                   rel="home"
+                                                   aria-current="page">
+                                                    <img width="106"
+                                                         height="82"
+                                                         src="~/wp-content/uploads/2023/04/I-can-cropped-106x82.png"
+                                                         class="custom-logo"
+                                                         alt="mummiesrus"
+                                                         decoding="async"
+                                                         srcset="
+                                ~/wp-content/uploads/2023/04/I-can-cropped-106x82.png  106w,
+                                ~/wp-content/uploads/2023/04/I-can-cropped-300x231.png 300w,
+                                ~/wp-content/uploads/2023/04/I-can-cropped.png         391w
+                              "
+                                                         sizes="(max-width: 106px) 100vw, 106px" />
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <!-- .site-branding -->
+                                    </div>
+                                    <div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item"
+                                         data-section="section-hb-menu-1">
+                                        <div class="ast-main-header-bar-alignment">
+                                            <div class="main-header-bar-navigation">
+                                                <nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item"
+                                                     id="primary-site-navigation-desktop"
+                                                     aria-label="Site Navigation"
+                                                     itemtype="https://schema.org/SiteNavigationElement"
+                                                     itemscope="itemscope">
+                                                    <div class="main-navigation ast-inline-flex">
+                                                        <ul id="ast-hf-menu-1"
+                                                            class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex submenu-with-border stack-on-mobile">
+                                                            <li id="menu-item-289"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-23 current_page_item menu-item-289">
+                                                                <a asp-page="/Index"
+                                                                   aria-current="page"
+                                                                   class="menu-link">Home</a>
+                                                            </li>
+                                                            <li id="menu-item-1134"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134">
+                                                                <a asp-page="/BurialSummary"
+                                                                   class="menu-link">Burial Summary</a>
+                                                            </li>
+                                                            <li id="menu-item-1147"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1147">
+                                                                <a asp-page="/Supervised"
+                                                                   class="menu-link">Supervised Analysis</a>
+                                                            </li>
+                                                            <li id="menu-item-1148"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1148">
+                                                                <a asp-page="/Unsupervised"
+                                                                   class="menu-link">Unsupervised Analysis</a>
+                                                            </li>
+                                                            <li id="menu-item-1159"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1159">
+                                                                <a asp-page="/GoAdmin"
+                                                                   class="menu-link">
+                                                                    Admin
+                                                                    <span role="application"
+                                                                          class="dropdown-menu-toggle ast-header-navigation-arrow"
+                                                                          tabindex="0"
+                                                                          aria-expanded="false"
+                                                                          aria-label="Menu Toggle">
+                                                                        <span class="ast-icon icon-arrow">
+                                                                            <svg class="ast-arrow-svg"
+                                                                                 xmlns="http://www.w3.org/2000/svg"
+                                                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                                 version="1.1"
+                                                                                 x="0px"
+                                                                                 y="0px"
+                                                                                 width="26px"
+                                                                                 height="16.043px"
+                                                                                 viewbox="57 35.171 26 16.043"
+                                                                                 enable-background="new 57 35.171 26 16.043"
+                                                                                 xml:space="preserve">
+                                                                            <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+                                        </svg>
+                                                                        </span>
+                                                                    </span>
+                                                                </a>
+                                                                <button class="ast-menu-toggle"
+                                                                        aria-expanded="false">
+                                                                    <span class="screen-reader-text">Menu Toggle</span>
+                                                                    <span class="ast-icon icon-arrow">
+                                                                        <svg class="ast-arrow-svg"
+                                                                             xmlns="http://www.w3.org/2000/svg"
+                                                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                             version="1.1"
+                                                                             x="0px"
+                                                                             y="0px"
+                                                                             width="26px"
+                                                                             height="16.043px"
+                                                                             viewbox="57 35.171 26 16.043"
+                                                                             enable-background="new 57 35.171 26 16.043"
+                                                                             xml:space="preserve">
+                                                                        <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+                                      </svg>
+                                                                    </span>
+                                                                </button>
+                                                                <ul class="sub-menu">
+                                                                    <li id="menu-item-1197"
+                                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197">
+                                                                        <a asp-page="/GoAdmin"
+                                                                           class="menu-link">
+                                                                            <span class="ast-icon icon-arrow">
+                                                                                <svg class="ast-arrow-svg"
+                                                                                     xmlns="http://www.w3.org/2000/svg"
+                                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                                     version="1.1"
+                                                                                     x="0px"
+                                                                                     y="0px"
+                                                                                     width="26px"
+                                                                                     height="16.043px"
+                                                                                     viewbox="57 35.171 26 16.043"
+                                                                                     enable-background="new 57 35.171 26 16.043"
+                                                                                     xml:space="preserve">
+                                                                                <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+                                          </svg>
+                                                                            </span>
+                                                                            User Roles
+                                                                        </a>
+                                                                    </li>
+                                                                    <li id="menu-item-1215"
+                                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1215">
+                                                                        <a asp-page="/DatabaseManagement"
+                                                                           class="menu-link">
+                                                                            <span class="ast-icon icon-arrow">
+                                                                                <svg class="ast-arrow-svg"
+                                                                                     xmlns="http://www.w3.org/2000/svg"
+                                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                                     version="1.1"
+                                                                                     x="0px"
+                                                                                     y="0px"
+                                                                                     width="26px"
+                                                                                     height="16.043px"
+                                                                                     viewbox="57 35.171 26 16.043"
+                                                                                     enable-background="new 57 35.171 26 16.043"
+                                                                                     xml:space="preserve">
+                                                                                <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+                                          </svg>
+                                                                            </span>
+                                                                            Database Management
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <partial name="_LoginPartial" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ast-desktop-header-content content-align-flex-start"></div>
+            </div>
+            <!-- Main Header Bar Wrap -->
+            <div id="ast-mobile-header"
+                 class="ast-mobile-header-wrap"
+                 data-type="dropdown">
+                <div class="ast-main-header-wrap main-header-bar-wrap">
+                    <div class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap site-header-focus-item ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default"
+                         data-section="section-primary-header-builder">
+                        <div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
+                            <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
+                                <div class="ast-builder-layout-element ast-flex site-header-focus-item"
+                                     data-section="title_tagline">
+                                    <div class="site-branding ast-site-identity"
+                                         itemtype="https://schema.org/Organization"
+                                         itemscope="itemscope">
+                                        <span class="site-logo-img">
+                                            <a href="./index.html"
+                                               class="custom-logo-link"
+                                               rel="home"
+                                               aria-current="page">
+                                                <img width="106"
+                                                     height="82"
+                                                     src="~/wp-content/uploads/2023/04/I-can-cropped-106x82.png"
+                                                     class="custom-logo"
+                                                     alt="mummiesrus"
+                                                     decoding="async"
+                                                     srcset="
+                              ~/wp-content/uploads/2023/04/I-can-cropped-106x82.png  106w,
+                              ~/wp-content/uploads/2023/04/I-can-cropped-300x231.png 300w,
+                              ~/wp-content/uploads/2023/04/I-can-cropped.png         391w
+                            "
+                                                     sizes="(max-width: 106px) 100vw, 106px" />
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <!-- .site-branding -->
+                                </div>
+                            </div>
+                            <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+                                <div class="ast-builder-layout-element ast-flex site-header-focus-item"
+                                     data-section="section-header-mobile-trigger">
+                                    <div class="ast-button-wrap">
+                                        <button type="button"
+                                                class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal"
+                                                aria-expanded="false">
+                                            <span class="screen-reader-text">Main Menu</span>
+                                            <span class="mobile-menu-toggle-icon">
+                                                <span class="ahfb-svg-iconset ast-inline-flex svg-baseline">
+                                                    <svg class="ast-mobile-svg ast-menu-svg"
+                                                         fill="currentColor"
+                                                         version="1.1"
+                                                         xmlns="http://www.w3.org/2000/svg"
+                                                         width="24"
+                                                         height="24"
+                                                         viewbox="0 0 24 24">
+                                                        <path d="M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="ahfb-svg-iconset ast-inline-flex svg-baseline">
+                                                    <svg class="ast-mobile-svg ast-close-svg"
+                                                         fill="currentColor"
+                                                         version="1.1"
+                                                         xmlns="http://www.w3.org/2000/svg"
+                                                         width="24"
+                                                         height="24"
+                                                         viewbox="0 0 24 24">
+                                                        <path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ast-mobile-header-content content-align-flex-start">
+                    <div class="ast-builder-menu-mobile ast-builder-menu ast-builder-menu-mobile-focus-item ast-builder-layout-element site-header-focus-item"
+                         data-section="section-header-mobile-menu">
+                        <div class="ast-main-header-bar-alignment">
+                            <div class="main-header-bar-navigation">
+                                <nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item"
+                                     id="ast-mobile-site-navigation"
+                                     aria-label="Site Navigation"
+                                     itemtype="https://schema.org/SiteNavigationElement"
+                                     itemscope="itemscope">
+                                    <div class="main-navigation">
+                                        <ul id="ast-hf-mobile-menu"
+                                            class="main-header-menu ast-nav-menu ast-flex submenu-with-border astra-menu-animation-fade stack-on-mobile">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-23 current_page_item menu-item-289">
+                                                <a asp-page="/Index"
+                                                   aria-current="page"
+                                                   class="menu-link">Home</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134">
+                                                <a asp-page="/BurialSummary"
+                                                   class="menu-link">Burial Summary</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1147">
+                                                <a asp-page="/Supervised"
+                                                   class="menu-link">Supervised Analysis</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1148">
+                                                <a asp-page="/Unsupervised"
+                                                   class="menu-link">Unsupervised Analysis</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1159">
+                                                <a asp-page="/GoAdmin" class="menu-link">
+                                                    Admin
+                                                    <span role="application"
+                                                          class="dropdown-menu-toggle ast-header-navigation-arrow"
+                                                          tabindex="0"
+                                                          aria-expanded="false"
+                                                          aria-label="Menu Toggle">
+                                                        <span class="ast-icon icon-arrow">
+                                                            <svg class="ast-arrow-svg"
+                                                                 xmlns="http://www.w3.org/2000/svg"
+                                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                 version="1.1"
+                                                                 x="0px"
+                                                                 y="0px"
+                                                                 width="26px"
+                                                                 height="16.043px"
+                                                                 viewbox="57 35.171 26 16.043"
+                                                                 enable-background="new 57 35.171 26 16.043"
+                                                                 xml:space="preserve">
+                                                            <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+                                </svg>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                                <button class="ast-menu-toggle" aria-expanded="false">
+                                                    <span class="screen-reader-text">Menu Toggle</span>
+                                                    <span class="ast-icon icon-arrow">
+                                                        <svg class="ast-arrow-svg"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                             version="1.1"
+                                                             x="0px"
+                                                             y="0px"
+                                                             width="26px"
+                                                             height="16.043px"
+                                                             viewbox="57 35.171 26 16.043"
+                                                             enable-background="new 57 35.171 26 16.043"
+                                                             xml:space="preserve">
+                                                        <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+                              </svg>
+                                                    </span>
+                                                </button>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197">
+                                                        <a asp-page="/GoAdmin" class="menu-link">
+                                                            <span class="ast-icon icon-arrow">
+                                                                <svg class="ast-arrow-svg"
+                                                                     xmlns="http://www.w3.org/2000/svg"
+                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                     version="1.1"
+                                                                     x="0px"
+                                                                     y="0px"
+                                                                     width="26px"
+                                                                     height="16.043px"
+                                                                     viewbox="57 35.171 26 16.043"
+                                                                     enable-background="new 57 35.171 26 16.043"
+                                                                     xml:space="preserve">
+                                                                <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+                                  </svg>
+                                                            </span>
+                                                            User Roles
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1215">
+                                                        <a asp-page="/DatabaseManagement"
+                                                           class="menu-link">
+                                                            <span class="ast-icon icon-arrow">
+                                                                <svg class="ast-arrow-svg"
+                                                                     xmlns="http://www.w3.org/2000/svg"
+                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                     version="1.1"
+                                                                     x="0px"
+                                                                     y="0px"
+                                                                     width="26px"
+                                                                     height="16.043px"
+                                                                     viewbox="57 35.171 26 16.043"
+                                                                     enable-background="new 57 35.171 26 16.043"
+                                                                     xml:space="preserve">
+                                                                <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+                                  </svg>
+                                                            </span>
+                                                            Database Management
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Intex_II_Section4_Team12 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer
+        class="site-footer"
+        id="colophon"
+        itemtype="https://schema.org/WPFooter"
+        itemscope="itemscope"
+        itemid="#colophon"
+      >
+        <div
+          class="site-primary-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-3-cwide ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack"
+          data-section="section-primary-footer-builder"
+        >
+          <div class="ast-builder-grid-row-container-inner">
+            <div
+              class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row"
+            >
+              <div
+                class="site-footer-primary-section-1 site-footer-section site-footer-section-1"
+              ></div>
+              <div
+                class="site-footer-primary-section-2 site-footer-section site-footer-section-2"
+              >
+                <div
+                  class="footer-widget-area widget-area site-footer-focus-item ast-footer-html-2"
+                  data-section="section-fb-html-2"
+                >
+                  <div class="ast-header-html inner-link-style-">
+                    <div class="ast-builder-html-element">
+                      <h2>
+                        Discover the secrets of the Fag el-Gamous burial site
+                        today!
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <aside
+                  class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner"
+                  data-section="sidebar-widgets-footer-widget-1"
+                  aria-label="Footer Widget 1"
+                >
+                  <section id="block-7" class="widget widget_block"></section>
+                </aside>
+              </div>
+              <div
+                class="site-footer-primary-section-3 site-footer-section site-footer-section-3"
+              ></div>
+            </div>
+          </div>
         </div>
-    </footer>
+        <div
+          class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-3-cheavy ast-builder-grid-row-tablet-3-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack"
+          data-section="section-below-footer-builder"
+        >
+          <div class="ast-builder-grid-row-container-inner">
+            <div
+              class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row"
+            >
+              <div
+                class="site-footer-below-section-1 site-footer-section site-footer-section-1"
+              >
+                <div
+                  class="footer-widget-area widget-area site-footer-focus-item ast-footer-html-1"
+                  data-section="section-fb-html-1"
+                >
+                  <div class="ast-header-html inner-link-style-">
+                    <div class="ast-builder-html-element">
+                      <p>
+                        <img
+                          class="alignnone wp-image-1106"
+                          src="~/wp-content/uploads/2023/04/I-can-cropped-300x231.png"
+                          alt=""
+                          width="100"
+                          height="77"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="site-footer-below-section-2 site-footer-section site-footer-section-2"
+              >
+                <div
+                  class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright"
+                  data-section="section-footer-builder"
+                >
+                  <div class="ast-footer-copyright">
+                    <p>&copy; 2023 mummiesrus | <a asp-area="" asp-page="/Privacy">Privacy Policy</a></p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="site-footer-below-section-3 site-footer-section site-footer-section-3"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- #colophon -->
+    </div>
+    <!-- #page -->
+    <script id="astra-theme-js-js-extra">
+      var astra = {
+        break_point: "921",
+        isRtl: "",
+        is_scroll_to_id: "",
+        is_scroll_to_top: "",
+        is_header_footer_builder_active: "1",
+      };
+    </script>
+    <script
+      src="~/wp-content/themes/astra/assets/js/minified/frontend.min.js?ver=4.1.3"
+      id="astra-theme-js-js"
+    ></script>
+    <script id="edd-ajax-js-extra">
+      var edd_scripts = {
+        ajaxurl: ".\/\/wp-admin\/admin-ajax.php",
+        position_in_cart: "",
+        has_purchase_links: "",
+        already_in_cart_message:
+          "You have already added this item to your cart",
+        empty_cart_message: "Your cart is empty",
+        loading: "Loading",
+        select_option: "Please select an option",
+        is_checkout: "0",
+        default_gateway: "",
+        redirect_to_checkout: "0",
+        checkout_page: ".\/\/?p=4",
+        permalinks: "1",
+        quantities_enabled: "",
+        taxes_enabled: "0",
+        current_page: "23",
+      };
+    </script>
+    <script
+      src="~/wp-content/plugins/easy-digital-downloads/assets/js/edd-ajax.js?ver=3.1.1.3"
+      id="edd-ajax-js"
+    ></script>
+    <script id="edd-ajax-js-after">
+      jQuery(document).ready(function ($) {
+        /**
+         * Astra - Easy Digital Downloads Cart Quantity & Total Amount
+         */
+        var cartQuantity = jQuery(".ast-edd-site-header-cart-wrap .count"),
+          iconQuantity = jQuery(".ast-edd-site-header-cart-wrap .astra-icon"),
+          cartTotalAmount = jQuery(
+            ".ast-edd-site-header-cart-wrap .ast-edd-header-cart-total"
+          );
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+        jQuery("body").on("edd_cart_item_added", function (event, response) {
+          cartQuantity.html(response.cart_quantity);
+          iconQuantity.attr("data-cart-total", response.cart_quantity);
+          cartTotalAmount.html(response.total);
+        });
 
+        jQuery("body").on("edd_cart_item_removed", function (event, response) {
+          cartQuantity.html(response.cart_quantity);
+          iconQuantity.attr("data-cart-total", response.cart_quantity);
+          cartTotalAmount.html(response.total);
+        });
+      });
+    </script>
+    <script id="eael-general-js-extra">
+      var localize = {
+        ajaxurl: ".\/\/wp-admin\/admin-ajax.php",
+        nonce: "e357d0363b",
+        i18n: { added: "Added ", compare: "Compare", loading: "Loading..." },
+        eael_translate_text: {
+          required_text: "is a required field",
+          invalid_text: "Invalid",
+          billing_text: "Billing",
+          shipping_text: "Shipping",
+          fg_mfp_counter_text: "of",
+        },
+        page_permalink: ".\/\/",
+        cart_redirectition: "",
+        cart_page_url: "",
+        el_breakpoints: {
+          mobile: {
+            label: "Mobile Portrait",
+            value: 767,
+            default_value: 767,
+            direction: "max",
+            is_enabled: true,
+          },
+          mobile_extra: {
+            label: "Mobile Landscape",
+            value: 880,
+            default_value: 880,
+            direction: "max",
+            is_enabled: false,
+          },
+          tablet: {
+            label: "Tablet Portrait",
+            value: 1024,
+            default_value: 1024,
+            direction: "max",
+            is_enabled: true,
+          },
+          tablet_extra: {
+            label: "Tablet Landscape",
+            value: 1200,
+            default_value: 1200,
+            direction: "max",
+            is_enabled: false,
+          },
+          laptop: {
+            label: "Laptop",
+            value: 1366,
+            default_value: 1366,
+            direction: "max",
+            is_enabled: false,
+          },
+          widescreen: {
+            label: "Widescreen",
+            value: 2400,
+            default_value: 2400,
+            direction: "min",
+            is_enabled: false,
+          },
+        },
+      };
+    </script>
+    <script
+      src="~/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=5.7.0"
+      id="eael-general-js"
+    ></script>
+    <script
+      src="~/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.12.1"
+      id="elementor-webpack-runtime-js"
+    ></script>
+    <script
+      src="~/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.12.1"
+      id="elementor-frontend-modules-js"
+    ></script>
+    <script
+      src="~/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
+      id="elementor-waypoints-js"
+    ></script>
+    <script
+      src="~/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2"
+      id="jquery-ui-core-js"
+    ></script>
+    <script id="elementor-frontend-js-before">
+      var elementorFrontendConfig = {
+        environmentMode: {
+          edit: false,
+          wpPreview: false,
+          isScriptDebug: false,
+        },
+        i18n: {
+          shareOnFacebook: "Share on Facebook",
+          shareOnTwitter: "Share on Twitter",
+          pinIt: "Pin it",
+          download: "Download",
+          downloadImage: "Download image",
+          fullscreen: "Fullscreen",
+          zoom: "Zoom",
+          share: "Share",
+          playVideo: "Play Video",
+          previous: "Previous",
+          next: "Next",
+          close: "Close",
+        },
+        is_rtl: false,
+        breakpoints: { xs: 0, sm: 480, md: 768, lg: 1025, xl: 1440, xxl: 1600 },
+        responsive: {
+          breakpoints: {
+            mobile: {
+              label: "Mobile Portrait",
+              value: 767,
+              default_value: 767,
+              direction: "max",
+              is_enabled: true,
+            },
+            mobile_extra: {
+              label: "Mobile Landscape",
+              value: 880,
+              default_value: 880,
+              direction: "max",
+              is_enabled: false,
+            },
+            tablet: {
+              label: "Tablet Portrait",
+              value: 1024,
+              default_value: 1024,
+              direction: "max",
+              is_enabled: true,
+            },
+            tablet_extra: {
+              label: "Tablet Landscape",
+              value: 1200,
+              default_value: 1200,
+              direction: "max",
+              is_enabled: false,
+            },
+            laptop: {
+              label: "Laptop",
+              value: 1366,
+              default_value: 1366,
+              direction: "max",
+              is_enabled: false,
+            },
+            widescreen: {
+              label: "Widescreen",
+              value: 2400,
+              default_value: 2400,
+              direction: "min",
+              is_enabled: false,
+            },
+          },
+        },
+        version: "3.12.1",
+        is_static: false,
+        experimentalFeatures: {
+          e_dom_optimization: true,
+          e_optimized_assets_loading: true,
+          e_optimized_css_loading: true,
+          a11y_improvements: true,
+          additional_custom_breakpoints: true,
+          e_swiper_latest: true,
+          "landing-pages": true,
+        },
+        urls: { assets: ".\/\/wp-content\/plugins\/elementor\/assets\/" },
+        swiperClass: "swiper",
+        settings: { page: [], editorPreferences: [] },
+        kit: {
+          active_breakpoints: ["viewport_mobile", "viewport_tablet"],
+          global_image_lightbox: "yes",
+          lightbox_enable_counter: "yes",
+          lightbox_enable_fullscreen: "yes",
+          lightbox_enable_zoom: "yes",
+          lightbox_enable_share: "yes",
+          lightbox_title_src: "title",
+          lightbox_description_src: "description",
+        },
+        post: {
+          id: 23,
+          title: "mummiesrus",
+          excerpt: "",
+          featuredImage: false,
+        },
+      };
+    </script>
+    <script
+      src="~/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.12.1"
+      id="elementor-frontend-js"
+    ></script>
+    <script
+      src="~/wp-includes/js/underscore.min.js?ver=1.13.4"
+      id="underscore-js"
+    ></script>
+    <script id="wp-util-js-extra">
+      var _wpUtilSettings = { ajax: { url: "\/wp-admin\/admin-ajax.php" } };
+    </script>
+    <script
+      src="~/wp-includes/js/wp-util.min.js?ver=6.2"
+      id="wp-util-js"
+    ></script>
+    <script id="wpforms-elementor-js-extra">
+      var wpformsElementorVars = {
+        captcha_provider: "recaptcha",
+        recaptcha_type: "v2",
+      };
+    </script>
+    <script
+      src="~/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.8.1.1"
+      id="wpforms-elementor-js"
+    ></script>
+    <script>
+      /(trident|msie)/i.test(navigator.userAgent) &&
+        document.getElementById &&
+        window.addEventListener &&
+        window.addEventListener(
+          "hashchange",
+          function () {
+            var t,
+              e = location.hash.substring(1);
+            /^[A-z0-9_-]+$/.test(e) &&
+              (t = document.getElementById(e)) &&
+              (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) ||
+                (t.tabIndex = -1),
+              t.focus());
+          },
+          !1
+        );
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
