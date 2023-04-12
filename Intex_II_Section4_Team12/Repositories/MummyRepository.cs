@@ -15,7 +15,7 @@ namespace Intex_II_Section4_Team12.Repositories
         }
 
         private readonly MummyContext _context;
-        private int pageSize = 10;
+        private int pageSize = 50;
 
         /// <summary>
         /// Get all 
@@ -28,11 +28,16 @@ namespace Intex_II_Section4_Team12.Repositories
 
             var numToSkip = (pageNum - 1) / pageSize;
 
-            var burials = _context.Burialmains
-                .Skip(numToSkip)
-                .Take(pageSize)
-                .Where(b => b.MainTextiles.Count > 0)
+            var burials = _context
+                .Set<Burialmain>()
+                .Include(b => b.BodyAnalysisCharts)
                 .Include(b => b.MainTextiles)
+                    .ThenInclude(t => t.MainStructures)
+                .Include(b => b.MainTextiles)
+                    .ThenInclude(t => t.MainTextilefunctions)
+                .Include(b => b.MainTextiles)
+                    .ThenInclude(t => t.MainColors)
+                .Include(b => b.BodyAnalysisCharts)
                 .ToList();
 
             return burials;
@@ -49,6 +54,8 @@ namespace Intex_II_Section4_Team12.Repositories
                     .ThenInclude(t => t.MainStructures)
                 .Include(b => b.MainTextiles)
                     .ThenInclude(t => t.MainTextilefunctions)
+                .Include(b => b.MainTextiles)
+                    .ThenInclude(t => t.MainColors)
                 .Include(b => b.BodyAnalysisCharts);
 
             //FILTERS
@@ -99,22 +106,52 @@ namespace Intex_II_Section4_Team12.Repositories
                     .Where(b => b.Facebundles == request.FaceBundles);
             }
 
-            //TEXTILE FUNCTIONS
-            //Get list of IDs so far
-            var burialIds = burials.Select(b => b.Id).ToList();
-
-
-
+            //BODY ANALYSIS
             //Stature
             if (!String.IsNullOrEmpty(request.EstimateStature))
             {
                 burials = burials
                     .Where(b => b.BodyAnalysisCharts
-                    .Any(c => c.EstimateStature
-                    .Contains(request.EstimateStature)));
+                        .Any(c => c.EstimateStature
+                            .Contains(request.EstimateStature, StringComparison.CurrentCultureIgnoreCase)));
             }
 
 
+            //TEXTILE FUNCTIONS
+            //Structure
+            if (!String.IsNullOrEmpty(request.TextileStructure))
+            {
+                burials = burials
+                    .Where(b => b.MainTextiles
+                        .Any(t => t.MainStructures
+                            .Any(s => s.Value.Contains(request.TextileStructure, StringComparison.CurrentCultureIgnoreCase))));
+            }
+
+            //Color
+            if (!String.IsNullOrEmpty(request.TextileColor))
+            {
+                burials = burials
+                    .Where(b => b.MainTextiles
+                        .Any(t => t.MainColors
+                            .Any(c => c.Value.Contains(request.TextileColor, StringComparison.CurrentCultureIgnoreCase))));
+            }
+
+            //Ribbons
+            if (request.ContainsRibbons.HasValue && request.ContainsRibbons == true)
+            {
+                burials = burials
+                    .Where(b => b.MainTextiles
+                        .Any(t => t.Description.Contains("ribbons", StringComparison.CurrentCultureIgnoreCase)));
+            }
+
+            //Function
+            if (!String.IsNullOrEmpty(request.TextileFunction))
+            {
+                burials = burials
+                    .Where(b => b.MainTextiles
+                        .Any(t => t.MainTextilefunctions
+                            .Any(f => f.Value.Contains(request.TextileFunction, StringComparison.CurrentCultureIgnoreCase))));
+            }
 
             //Burial ID
             if (!String.IsNullOrEmpty(request.BurialId))
@@ -123,9 +160,12 @@ namespace Intex_II_Section4_Team12.Repositories
                     .Where(b => (b.Squarenorthsouth + b.Northsouth + b.Squareeastwest + b.Eastwest + b.Area + b.Burialnumber) == request.BurialId);
             }
 
+            var burialList = burials.ToList();
 
+            var numPages = burialList.Count / pageSize;
+            if (numPages == 0) { numPages = 1; }
 
-            FilteredRecordsWithPages response = new FilteredRecordsWithPages(burials.ToList(), request.PageNum, burials.Count()/pageSize);
+            FilteredRecordsWithPages response = new FilteredRecordsWithPages(burialList, request.PageNum, numPages);
 
             return response;
 
