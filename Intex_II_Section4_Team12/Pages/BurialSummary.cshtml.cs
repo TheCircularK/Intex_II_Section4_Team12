@@ -14,12 +14,11 @@ namespace Intex_II_Section4_Team12.Pages
         public BurialSummaryModel(IMummyRepository temp)
         {
             _repo = temp;
-
-            Records = _repo.GetFiltered(_request);
         }
 
         public void OnGet()
         {
+            Records = _repo.GetFiltered(_request);
         }
 
         public IActionResult OnPost()
@@ -41,7 +40,7 @@ namespace Intex_II_Section4_Team12.Pages
 
             if (MaxBur != null && MaxBur != "")
             {
-                _request.MinBurialDepth = float.Parse(MaxBur);
+                _request.MaxBurialDepth = float.Parse(MaxBur);
             }
             else
             {
@@ -76,7 +75,7 @@ namespace Intex_II_Section4_Team12.Pages
             }
             else
             {
-                _request.ContainsRibbons = false;
+                _request.ContainsRibbons = null;
             }
             
 

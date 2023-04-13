@@ -16,7 +16,7 @@ namespace Intex_II_Section4_Team12.Models
         public string? Headdirection { get; set; }
         public string? Sex { get; set; }
         public string? Northsouth { get; set; }
-        public string? Depth { get; set; }
+        public double? Depth { get; set; }
         public string? Eastwest { get; set; }
         public string? Adultsubadult { get; set; }
         public string? Facebundles { get; set; }

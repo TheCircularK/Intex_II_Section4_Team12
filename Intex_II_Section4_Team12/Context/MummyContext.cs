@@ -329,7 +329,7 @@ namespace Intex_II_Section4_Team12.Context
                     .HasColumnName("dateofexcavation");
 
                 entity.Property(e => e.Depth)
-                    .HasMaxLength(200)
+                    .HasColumnType("double")
                     .HasColumnName("depth");
 
                 entity.Property(e => e.Eastwest)

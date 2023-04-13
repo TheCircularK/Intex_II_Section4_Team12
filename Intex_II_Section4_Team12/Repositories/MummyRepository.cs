@@ -88,12 +88,12 @@ namespace Intex_II_Section4_Team12.Repositories
             if (request.MinBurialDepth.HasValue && request.MinBurialDepth > 0)
             {
                 burials = burials
-                    .Where(b => float.Parse(b.Depth) >= request.MinBurialDepth);
+                    .Where(b => b.Depth != null && b.Depth >= request.MinBurialDepth);
             }
             if (request.MaxBurialDepth.HasValue && request.MaxBurialDepth > 0)
             {
                 burials = burials
-                    .Where(b => float.Parse(b.Depth) <= request.MaxBurialDepth);
+                    .Where(b => b.Depth != null && b.Depth <= request.MaxBurialDepth);
             }
 
             //Age at Death
@@ -142,7 +142,7 @@ namespace Intex_II_Section4_Team12.Repositories
                 burials = burials
                     .Where(b => b.MainTextiles
                         .Any(t => t.MainStructures
-                            .Any(s => s.Value.Contains(request.TextileStructure, StringComparison.CurrentCultureIgnoreCase))));
+                            .Any(s => s.Value.Contains(request.TextileStructure))));
             }
 
             //Color
@@ -151,7 +151,7 @@ namespace Intex_II_Section4_Team12.Repositories
                 burials = burials
                     .Where(b => b.MainTextiles
                         .Any(t => t.MainColors
-                            .Any(c => c.Value.Contains(request.TextileColor, StringComparison.CurrentCultureIgnoreCase))));
+                            .Any(c => c.Value.Contains(request.TextileColor))));
             }
 
             //Ribbons
@@ -159,7 +159,7 @@ namespace Intex_II_Section4_Team12.Repositories
             {
                 burials = burials
                     .Where(b => b.MainTextiles
-                        .Any(t => t.Description.Contains("ribbons", StringComparison.CurrentCultureIgnoreCase)));
+                        .Any(t => t.Description.Contains("ribbon")));
             }
 
             //Function
@@ -168,7 +168,7 @@ namespace Intex_II_Section4_Team12.Repositories
                 burials = burials
                     .Where(b => b.MainTextiles
                         .Any(t => t.MainTextilefunctions
-                            .Any(f => f.Value.Contains(request.TextileFunction, StringComparison.CurrentCultureIgnoreCase))));
+                            .Any(f => f.Value.Contains(request.TextileFunction))));
             }
 
             //Burial ID
