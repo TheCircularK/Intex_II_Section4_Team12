@@ -5,14 +5,9 @@
     ViewData["ActivePage"] = ManageNavPages.Email;
 }
 
-<style>
-    .centercss {
-        margin-left: 40%;
-    }
-</style>
 <h3 class="centercss">@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
-<div class="centercss">
+<div class="accountcss">
     <div class="col-md-6">
         <form id="email-form" method="post">
             <div asp-validation-summary="All" class="text-danger"></div>

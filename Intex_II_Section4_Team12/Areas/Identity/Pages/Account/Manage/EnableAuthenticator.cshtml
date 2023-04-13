@@ -6,6 +6,7 @@
 }
 
 <partial name="_StatusMessage" for="StatusMessage" />
+<div class="centercss">
 <h3>@ViewData["Title"]</h3>
 <div>
     <p>To use an authenticator app go through the following steps:</p>
@@ -39,6 +40,7 @@
                             <label asp-for="Input.Code" class="control-label form-label">Verification Code</label>
                             <span asp-validation-for="Input.Code" class="text-danger"></span>
                         </div>
+                        <br />
                         <button type="submit" class="w-100 btn btn-lg btn-primary">Verify</button>
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     </form>
@@ -47,7 +49,7 @@
         </li>
     </ol>
 </div>
-
+</div>
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

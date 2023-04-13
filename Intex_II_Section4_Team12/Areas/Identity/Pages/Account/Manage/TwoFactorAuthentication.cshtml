@@ -6,12 +6,6 @@
     ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
 }
 
-<style>
-    .centercss {
-        margin-left: 40%;
-    }
-</style>
-
 <partial name="_StatusMessage" for="StatusMessage" />
 <h3 class="centercss">@ViewData["Title"]</h3>
 @{
@@ -55,12 +49,12 @@
         <h4 class="centercss">Authenticator app</h4>
         @if (!Model.HasAuthenticator)
         {
-            <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="centercss">Add authenticator app</a>
+            <a style="color:orange; margin-left:45%;" id="enable-authenticator" asp-page="./EnableAuthenticator" class="centercss">Add authenticator app</a>
         }
         else
         {
-            <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary">Set up authenticator app</a>
-            <a id="reset-authenticator" asp-page="./ResetAuthenticator" class="btn btn-primary">Reset authenticator app</a>
+            <a style="color:orange;" id=" enable-authenticator" asp-page="./EnableAuthenticator" class="accountcss">Set up authenticator app</a>
+            <a style="color:orange;" id=" reset-authenticator" asp-page="./ResetAuthenticator" class="btn btn-primary">Reset authenticator app</a>
         }
     }
     else
