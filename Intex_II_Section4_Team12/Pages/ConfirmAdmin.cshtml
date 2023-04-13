@@ -3,6 +3,22 @@
 @{
 }
 
-<h2>Role Added Successfully</h2>
+@section Head {
+    <partial name="_StylesPartial" />
+}
 
-<a asp-page="/Index"><h3>Go Home</h3></a>
+<style>
+    .accountcss {
+        margin-left: 35%;
+    }
+
+</style>
+<br />
+<br />
+<br />
+<br />
+
+<div class="accountcss">
+<h2>Role Added Successfully</h2>
+    <a class="hovercolor" asp-page="/Index"><p>Go Home</p></a>
+</div>

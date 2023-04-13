@@ -1,19 +1,51 @@
+using Intex_II_Section4_Team12.Context;
 using Intex_II_Section4_Team12.Data;
+using Intex_II_Section4_Team12.Repositories;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http.Json;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var identityConnectionString = builder.Configuration.GetConnectionString("IdentityConnection");
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseSqlServer(identityConnectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    // Default Password settings.
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 14;
+    options.Password.RequiredUniqueChars = 1;
+});
+
+//Add mummy connecttion
+var mummyConnectionString = builder.Configuration.GetConnectionString("MummyConnectionString");
+
+builder.Services.AddDbContext<MummyContext>(options =>
+    options.UseNpgsql(mummyConnectionString));
+
+
+//Scoped services
+builder.Services.AddControllers().AddJsonOptions(options =>
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+builder.Services.AddScoped<IMummyRepository, MummyRepository>();
+builder.Services.AddScoped<IRecordRepository, RecordRepository>();
 
 // Cookie Policy
 builder.Services.Configure<CookiePolicyOptions>(options =>
@@ -42,18 +74,36 @@ else
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseCookiePolicy();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "mummy",
+        pattern: "mummy/getallburials/{pageNum}",
+        defaults: new { Controller = "Mummy", action = "GetAllBurials", pageNum = 1 });
+
+    endpoints.MapDefaultControllerRoute();
+
+    endpoints.MapRazorPages();
+});
+
+app.UseCookiePolicy();
+
+
+
 app.Use(async (context, next) =>
 {
     context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; connect-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; frame-src 'self';");
     await next();
-}
+});
 
 // Admin Account Setup
 using (var scope = app.Services.CreateScope())
@@ -85,7 +135,7 @@ using (var scope = app.Services.CreateScope())
     };
 
     // Register the user
-    var result = await userManager.CreateAsync(user, "Password123!");
+    var result = await userManager.CreateAsync(user, "PasswordPassword123!");
 
     // If the user is successfully created, assign the "Admin" role to the user
     if (result.Succeeded)

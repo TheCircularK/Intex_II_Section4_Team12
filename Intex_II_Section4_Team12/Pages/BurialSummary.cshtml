@@ -4822,7 +4822,8 @@
                                     </div>
                                 </div>
                             </section>
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-7da080f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            <form method="post">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-7da080f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                      data-id="7da080f"
                                      data-element_type="section"
                                      data-settings='{"background_background":"classic"}'>
@@ -4839,13 +4840,7 @@
                                                     <div class="eael-contact-form eael-wpforms eael-contact-form-align-default">
                                                         <div class="wpforms-container"
                                                              id="wpforms-1117">
-                                                            <form id="wpforms-form-1117"
-                                                                  class="wpforms-validate wpforms-form wpforms-ajax-form"
-                                                                  data-formid="1117"
-                                                                  method="post"
-                                                                  enctype="multipart/form-data"
-                                                                  action="/burial-summary/?simply_static_page=1298"
-                                                                  data-token="1798b3c020bcd4537882678f7fe05d21">
+                                                           
                                                                 <div class="wpforms-head-container"></div>
                                                                 <noscript class="wpforms-error-noscript">
                                                                     Please enable JavaScript in your
@@ -4859,34 +4854,30 @@
                                                                                for="wpforms-1117-field_11">Textile Color</label><input type="text"
                                                                                                                                        id="wpforms-1117-field_11"
                                                                                                                                        class="wpforms-field-small"
-                                                                                                                                       name="wpforms[fields][11]" />
+                                                                                                                                       name="TextileColor" />
                                                                     </div>
                                                                     <div id="wpforms-1117-field_12-container"
                                                                          class="wpforms-field wpforms-field-text"
                                                                          data-field-id="12">
                                                                         <label class="wpforms-field-label"
-                                                                               for="wpforms-1117-field_12">Minimum Burial Depth</label><input type="text"
+                                                                               for="wpforms-1117-field_12">Minimum Burial Depth</label><input type="number" step="0.01"
                                                                                                                                               id="wpforms-1117-field_12"
                                                                                                                                               class="wpforms-field-small"
-                                                                                                                                              name="wpforms[fields][12]" />
+                                                                                                                                              name="MinBurialDepth" />
                                                                     </div>
                                                                     <div id="wpforms-1117-field_13-container"
                                                                          class="wpforms-field wpforms-field-select wpforms-field-select-style-classic"
                                                                          data-field-id="13">
                                                                         <label class="wpforms-field-label"
                                                                                for="wpforms-1117-field_13">Age at Death</label>
-                                                                        <select id="wpforms-1117-field_13"
+                                                                        <select multiple id="wpforms-1117-field_13"
                                                                                 class="wpforms-field-small"
-                                                                                name="wpforms[fields][13]">
+                                                                                name="AgeAtDeath">
                                                                             <option value="" selected></option>
-                                                                            <option value="Adult">Adult</option>
-                                                                            <option value="Child">Child</option>
-                                                                            <option value="Infant">
-                                                                                Infant
-                                                                            </option>
-                                                                            <option value="New Born">
-                                                                                New Born
-                                                                            </option>
+                                                                            <option value="A">Adult</option>
+                                                                            <option value="C">Child</option>
+                                                                            <option value="I">Infant</option>
+                                                                            <option value="N">New Born</option>
                                                                         </select>
                                                                     </div>
                                                                     <div id="wpforms-1117-field_14-container"
@@ -4896,35 +4887,12 @@
                                                                                for="wpforms-1117-field_14">Textile Function</label><input type="text"
                                                                                                                                           id="wpforms-1117-field_14"
                                                                                                                                           class="wpforms-field-small"
-                                                                                                                                          name="wpforms[fields][14]" />
+                                                                                                                                          name="TextileFunction" />
                                                                     </div>
                                                                 </div>
                                                                 <!-- .wpforms-field-container -->
-                                                                <div class="wpforms-submit-container">
-                                                                    <input type="hidden"
-                                                                           name="wpforms[id]"
-                                                                           value="1117" /><input type="hidden"
-                                                                                                 name="wpforms[author]"
-                                                                                                 value="1" /><input type="hidden"
-                                                                                                                    name="wpforms[post_id]"
-                                                                                                                    value="1109" /><button type="submit"
-                                                                                                                                           name="wpforms[submit]"
-                                                                                                                                           id="wpforms-submit-1117"
-                                                                                                                                           class="wpforms-submit"
-                                                                                                                                           data-alt-text="Sending..."
-                                                                                                                                           data-submit-text="Submit"
-                                                                                                                                           aria-live="assertive"
-                                                                                                                                           value="wpforms-submit">
-                                                                        Submit
-                                                                    </button><img decoding="async"
-                                                                                  src="~/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg"
-                                                                                  class="wpforms-submit-spinner"
-                                                                                  style="display: none"
-                                                                                  width="26"
-                                                                                  height="26"
-                                                                                  alt="Loading" />
-                                                                </div>
-                                                            </form>
+                                                                
+                                                        
                                                         </div>
                                                         <!-- .wpforms-container -->
                                                     </div>
@@ -4944,13 +4912,7 @@
                                                     <div class="eael-contact-form eael-wpforms eael-contact-form-align-default">
                                                         <div class="wpforms-container"
                                                              id="wpforms-1119">
-                                                            <form id="wpforms-form-1119"
-                                                                  class="wpforms-validate wpforms-form wpforms-ajax-form"
-                                                                  data-formid="1119"
-                                                                  method="post"
-                                                                  enctype="multipart/form-data"
-                                                                  action="/burial-summary/?simply_static_page=1298"
-                                                                  data-token="020512e8169be3e60cbe0053fd615ffe">
+                                                            
                                                                 <div class="wpforms-head-container"></div>
                                                                 <noscript class="wpforms-error-noscript">
                                                                     Please enable JavaScript in your
@@ -4964,16 +4926,16 @@
                                                                                for="wpforms-1119-field_11">Textile Structure</label><input type="text"
                                                                                                                                            id="wpforms-1119-field_11"
                                                                                                                                            class="wpforms-field-small"
-                                                                                                                                           name="wpforms[fields][11]" />
+                                                                                                                                           name="TextileStructure" />
                                                                     </div>
                                                                     <div id="wpforms-1119-field_12-container"
                                                                          class="wpforms-field wpforms-field-text"
                                                                          data-field-id="12">
                                                                         <label class="wpforms-field-label"
-                                                                               for="wpforms-1119-field_12">Maximum Burial Depth</label><input type="text"
+                                                                               for="wpforms-1119-field_12">Maximum Burial Depth</label><input type="number" step="0.01"
                                                                                                                                               id="wpforms-1119-field_12"
                                                                                                                                               class="wpforms-field-small"
-                                                                                                                                              name="wpforms[fields][12]" />
+                                                                                                                                              name="MaxBurialDepth" />
                                                                     </div>
                                                                     <div id="wpforms-1119-field_13-container"
                                                                          class="wpforms-field wpforms-field-select wpforms-field-select-style-classic"
@@ -4984,11 +4946,9 @@
                                                                                 class="wpforms-field-small"
                                                                                 name="wpforms[fields][13]">
                                                                             <option value="" selected></option>
-                                                                            <option value="East">East</option>
-                                                                            <option value="West">West</option>
-                                                                            <option value="Not Determined">
-                                                                                Not Determined
-                                                                            </option>
+                                                                            <option value="E">East</option>
+                                                                            <option value="W">West</option>
+                                                                            <option value="I">Not Determined</option>
                                                                         </select>
                                                                     </div>
                                                                     <div id="wpforms-1119-field_14-container"
@@ -5000,18 +4960,12 @@
                                                                                 class="wpforms-field-small"
                                                                                 name="wpforms[fields][14]">
                                                                             <option value="" selected></option>
-                                                                            <option value="Brown">Brown</option>
-                                                                            <option value="Black">Black</option>
-                                                                            <option value="Brown-Red">
-                                                                                Brown-Red
-                                                                            </option>
-                                                                            <option value="Red/Red-Bl">
-                                                                                Red/Red-Bl
-                                                                            </option>
-                                                                            <option value="Blond">Blond</option>
-                                                                            <option value="Unknown">
-                                                                                Unknown
-                                                                            </option>
+                                                                            <option value="B">Brown</option>
+                                                                            <option value="K">Black</option>
+                                                                            <option value="A">Brown-Red</option>
+                                                                            <option value="R">Red/Red-Bl</option>
+                                                                            <option value="D">Blond</option>
+                                                                            <option value="U">Unknown</option>
                                                                         </select>
                                                                     </div>
                                                                 </div>
@@ -5031,7 +4985,7 @@
                                                                                                                                            data-submit-text="Submit"
                                                                                                                                            aria-live="assertive"
                                                                                                                                            value="wpforms-submit">
-                                                                        Submit
+                                                                        Filter
                                                                     </button><img decoding="async"
                                                                                   src="~/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg"
                                                                                   class="wpforms-submit-spinner"
@@ -5040,7 +4994,7 @@
                                                                                   height="26"
                                                                                   alt="Loading" />
                                                                 </div>
-                                                            </form>
+                                                            
                                                         </div>
                                                         <!-- .wpforms-container -->
                                                     </div>
@@ -5060,13 +5014,7 @@
                                                     <div class="eael-contact-form eael-wpforms eael-contact-form-align-default">
                                                         <div class="wpforms-container"
                                                              id="wpforms-1121">
-                                                            <form id="wpforms-form-1121"
-                                                                  class="wpforms-validate wpforms-form wpforms-ajax-form"
-                                                                  data-formid="1121"
-                                                                  method="post"
-                                                                  enctype="multipart/form-data"
-                                                                  action="/burial-summary/?simply_static_page=1298"
-                                                                  data-token="52cac26de8829b91821c51732086633a">
+                                                            
                                                                 <div class="wpforms-head-container"></div>
                                                                 <noscript class="wpforms-error-noscript">
                                                                     Please enable JavaScript in your
@@ -5078,17 +5026,13 @@
                                                                          data-field-id="4">
                                                                         <label class="wpforms-field-label"
                                                                                for="wpforms-1121-field_4">Sex</label>
-                                                                        <select id="wpforms-1121-field_4"
+                                                                        <select name="Sex" id="wpforms-1121-field_4"
                                                                                 class="wpforms-field-small"
-                                                                                name="wpforms[fields][4]">
+                                                                                >
                                                                             <option value="" selected></option>
-                                                                            <option value="Male">Male</option>
-                                                                            <option value="Female">
-                                                                                Female
-                                                                            </option>
-                                                                            <option value="Not Determined">
-                                                                                Not Determined
-                                                                            </option>
+                                                                            <option value="M">Male</option>
+                                                                            <option value="F">Female</option>
+                                                                            <option value="Not Determined">Not Determined</option>
                                                                         </select>
                                                                     </div>
                                                                     <div id="wpforms-1121-field_11-container"
@@ -5098,13 +5042,11 @@
                                                                                for="wpforms-1121-field_11">Estimated Stature</label>
                                                                         <select id="wpforms-1121-field_11"
                                                                                 class="wpforms-field-small"
-                                                                                name="wpforms[fields][11]">
+                                                                                name="EstimateStature">
                                                                             <option value="" selected></option>
                                                                             <option value="Heavy">Heavy</option>
                                                                             <option value="None">None</option>
-                                                                            <option value="Slight">
-                                                                                Slight
-                                                                            </option>
+                                                                            <option value="Slight">Slight</option>
                                                                         </select>
                                                                     </div>
                                                                     <div id="wpforms-1121-field_12-container"
@@ -5140,7 +5082,7 @@
                                                                             <li class="choice-1 depth-1">
                                                                                 <input type="checkbox"
                                                                                        id="wpforms-1121-field_14_1"
-                                                                                       name="wpforms[fields][14][]"
+                                                                                       name="ContainsRibbons"
                                                                                        value="Checked" /><label class="wpforms-field-label-inline"
                                                                                                                 for="wpforms-1121-field_14_1"></label>
                                                                             </li>
@@ -5148,31 +5090,8 @@
                                                                     </div>
                                                                 </div>
                                                                 <!-- .wpforms-field-container -->
-                                                                <div class="wpforms-submit-container">
-                                                                    <input type="hidden"
-                                                                           name="wpforms[id]"
-                                                                           value="1121" /><input type="hidden"
-                                                                                                 name="wpforms[author]"
-                                                                                                 value="1" /><input type="hidden"
-                                                                                                                    name="wpforms[post_id]"
-                                                                                                                    value="1109" /><button type="submit"
-                                                                                                                                           name="wpforms[submit]"
-                                                                                                                                           id="wpforms-submit-1121"
-                                                                                                                                           class="wpforms-submit"
-                                                                                                                                           data-alt-text="Sending..."
-                                                                                                                                           data-submit-text="Submit"
-                                                                                                                                           aria-live="assertive"
-                                                                                                                                           value="wpforms-submit">
-                                                                        Submit
-                                                                    </button><img decoding="async"
-                                                                                  src="~/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg"
-                                                                                  class="wpforms-submit-spinner"
-                                                                                  style="display: none"
-                                                                                  width="26"
-                                                                                  height="26"
-                                                                                  alt="Loading" />
-                                                                </div>
-                                                            </form>
+                                                               
+                                                           
                                                         </div>
                                                         <!-- .wpforms-container -->
                                                     </div>
@@ -5182,67 +5101,13 @@
                                     </div>
                                 </div>
                             </section>
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-b4b4dbe elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                                     data-id="b4b4dbe"
-                                     data-element_type="section"
-                                     data-settings='{"background_background":"classic"}'>
-                                <div class="elementor-container elementor-column-gap-default">
-                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-655657f"
-                                         data-id="655657f"
-                                         data-element_type="column">
-                                        <div class="elementor-widget-wrap elementor-element-populated">
-                                            <div class="elementor-element elementor-element-43b0fda elementor-widget elementor-widget-text-editor"
-                                                 data-id="43b0fda"
-                                                 data-element_type="widget"
-                                                 data-widget_type="text-editor.default">
-                                                <div class="elementor-widget-container">
-                                                    <style>
-                                                        /*! elementor - v3.12.1 - 02-04-2023 */
-                                                        .elementor-widget-text-editor.elementor-drop-cap-view-stacked
-                                                        .elementor-drop-cap {
-                                                            background-color: #69727d;
-                                                            color: #fff;
-                                                        }
-
-                                                        .elementor-widget-text-editor.elementor-drop-cap-view-framed
-                                                        .elementor-drop-cap {
-                                                            color: #69727d;
-                                                            border: 3px solid;
-                                                            background-color: transparent;
-                                                        }
-
-                                                        .elementor-widget-text-editor:not( .elementor-drop-cap-view-default )
-                                                        .elementor-drop-cap {
-                                                            margin-top: 8px;
-                                                        }
-
-                                                        .elementor-widget-text-editor:not( .elementor-drop-cap-view-default )
-                                                        .elementor-drop-cap-letter {
-                                                            width: 1em;
-                                                            height: 1em;
-                                                        }
-
-                                                        .elementor-widget-text-editor
-                                                        .elementor-drop-cap {
-                                                            float: left;
-                                                            text-align: center;
-                                                            line-height: 1;
-                                                            font-size: 50px;
-                                                        }
-
-                                                        .elementor-widget-text-editor
-                                                        .elementor-drop-cap-letter {
-                                                            display: inline-block;
-                                                        }
-                                                    </style>
-                                                    <p>No Records Returned From Filters.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-fcf99ec elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            </form>
+                            @if (Model.Records.BurialRecords.Count() > 0)
+                            {                                
+                                @foreach (var record in Model.Records.BurialRecords)
+                            {
+                                <a asp-page="/Details" asp-route-id="@record.Id" >
+                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-fcf99ec elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                      data-id="fcf99ec"
                                      data-element_type="section"
                                      data-settings='{"background_background":"classic"}'>
@@ -5257,7 +5122,14 @@
                                                  data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
                                                     <h3 class="elementor-heading-title elementor-size-default">
-                                                        Burial ID Here
+                                                        @(
+                                                            (record.Squarenorthsouth ?? " ") + 
+                                                            (record.Northsouth ?? " ") + 
+                                                            (record.Squareeastwest ?? " ") + 
+                                                            (record.Eastwest ?? " ") + 
+                                                            (record.Area ?? " ") + 
+                                                            (record.Burialnumber ?? " ")
+                                                        )
                                                     </h3>
                                                 </div>
                                             </div>
@@ -5276,7 +5148,7 @@
                                                      data-id="5d35859"
                                                      data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-03b7fc1"
+                                                    @*<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-03b7fc1"
                                                          data-id="03b7fc1"
                                                          data-element_type="column">
                                                         <div class="elementor-widget-wrap elementor-element-populated">
@@ -5305,8 +5177,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-269bd1b"
+                                                    </div>*@
+                                                    @*<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-269bd1b"
                                                          data-id="269bd1b"
                                                          data-element_type="column">
                                                         <div class="elementor-widget-wrap elementor-element-populated">
@@ -5335,7 +5207,80 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div>*@
+                                                            <!--Face Bundle-->
+                                                            <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b976c2d"
+                                                                 data-id="b976c2d"
+                                                                 data-element_type="column">
+                                                                <div class="elementor-widget-wrap elementor-element-populated">
+                                                                    <div class="elementor-element elementor-element-15f367d elementor-widget elementor-widget-heading"
+                                                                         data-id="15f367d"
+                                                                         data-element_type="widget"
+                                                                         data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <h5 class="elementor-heading-title elementor-size-default">
+                                                                                Presence of Face Bundle:
+                                                                            </h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-ca17fd8"
+                                                                 data-id="ca17fd8"
+                                                                 data-element_type="column">
+                                                                <div class="elementor-widget-wrap elementor-element-populated">
+                                                                    <div class="elementor-element elementor-element-9172624 elementor-widget elementor-widget-text-editor"
+                                                                         data-id="9172624"
+                                                                         data-element_type="widget"
+                                                                         data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <p>@record.Facebundles</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!--Contains Ribbons-->
+                                                            <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-5abde92"
+                                                                 data-id="5abde92"
+                                                                 data-element_type="column">
+                                                                <div class="elementor-widget-wrap elementor-element-populated">
+                                                                    <div class="elementor-element elementor-element-94582d2 elementor-widget elementor-widget-heading"
+                                                                         data-id="94582d2"
+                                                                         data-element_type="widget"
+                                                                         data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <h5 class="elementor-heading-title elementor-size-default">
+                                                                                Contains Ribbons:
+                                                                            </h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-a4a8a5f"
+                                                                 data-id="a4a8a5f"
+                                                                 data-element_type="column">
+                                                                <div class="elementor-widget-wrap elementor-element-populated">
+                                                                    <div class="elementor-element elementor-element-c07d27e elementor-widget elementor-widget-text-editor"
+                                                                         data-id="c07d27e"
+                                                                         data-element_type="widget"
+                                                                         data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <p>
+                                                                                @if (record.MainTextiles != null && record.MainTextiles.Any(t => (t.Description == null) ? false : t.Description.Contains("ribbon", StringComparison.InvariantCultureIgnoreCase)))
+                                                                                {
+                                                                                    <span>Yes</span>
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    <span>No</span>
+                                                                                }
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    <!--Sex-->
                                                     <div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-2a44089"
                                                          data-id="2a44089"
                                                          data-element_type="column">
@@ -5361,7 +5306,7 @@
                                                                  data-element_type="widget"
                                                                  data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <p>Whatever</p>
+                                                                    <p>@record.Sex</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -5372,6 +5317,7 @@
                                                      data-id="c256780"
                                                      data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
+                                                    <!--Burial Depth-->
                                                     <div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-a03e06a"
                                                          data-id="a03e06a"
                                                          data-element_type="column">
@@ -5397,11 +5343,13 @@
                                                                  data-element_type="widget"
                                                                  data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <p>Whatever</p>
+                                                                    <p>@record.Depth</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <!--Estimated Stature-->
                                                     <div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-30f3149"
                                                          data-id="30f3149"
                                                          data-element_type="column">
@@ -5427,11 +5375,18 @@
                                                                  data-element_type="widget"
                                                                  data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <p>Whatever</p>
+                                                                   <p>
+                                                                   @foreach (var chart in record.BodyAnalysisCharts)
+                                                                   {
+                                                                       <span>@chart.EstimateStature</span> 
+                                                                   }
+                                                                   </p>             
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <!--Age at Death-->
                                                     <div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-be37d4a"
                                                          data-id="be37d4a"
                                                          data-element_type="column">
@@ -5442,7 +5397,7 @@
                                                                  data-widget_type="heading.default">
                                                                 <div class="elementor-widget-container">
                                                                     <h5 class="elementor-heading-title elementor-size-default">
-                                                                        Age at Death
+                                                                        Age at Death:
                                                                     </h5>
                                                                 </div>
                                                             </div>
@@ -5457,7 +5412,7 @@
                                                                  data-element_type="widget"
                                                                  data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <p>Whatever</p>
+                                                                    <p>@record.Ageatdeath</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -5468,6 +5423,7 @@
                                                      data-id="91a258e"
                                                      data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
+                                                    <!--Head Direction-->
                                                     <div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-25ad552"
                                                          data-id="25ad552"
                                                          data-element_type="column">
@@ -5493,12 +5449,12 @@
                                                                  data-element_type="widget"
                                                                  data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <p>Whatever</p>
+                                                                    <p>@record.Headdirection</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-9bbc7ca"
+                                                    @*<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-9bbc7ca"
                                                          data-id="9bbc7ca"
                                                          data-element_type="column">
                                                         <div class="elementor-widget-wrap elementor-element-populated">
@@ -5527,7 +5483,9 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div>*@
+
+                                                    <!--Hair Color-->
                                                     <div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-a9cc31c"
                                                          data-id="a9cc31c"
                                                          data-element_type="column">
@@ -5553,7 +5511,7 @@
                                                                  data-element_type="widget"
                                                                  data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <p>Whatever</p>
+                                                                    <p>@record.Haircolor</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -5564,72 +5522,86 @@
                                                      data-id="19a52d9"
                                                      data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b976c2d"
-                                                         data-id="b976c2d"
-                                                         data-element_type="column">
-                                                        <div class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-15f367d elementor-widget elementor-widget-heading"
-                                                                 data-id="15f367d"
-                                                                 data-element_type="widget"
-                                                                 data-widget_type="heading.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <h5 class="elementor-heading-title elementor-size-default">
-                                                                        Presence of Face Bundle
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-ca17fd8"
-                                                         data-id="ca17fd8"
-                                                         data-element_type="column">
-                                                        <div class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-9172624 elementor-widget elementor-widget-text-editor"
-                                                                 data-id="9172624"
-                                                                 data-element_type="widget"
-                                                                 data-widget_type="text-editor.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <p>Whatever</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-5abde92"
-                                                         data-id="5abde92"
-                                                         data-element_type="column">
-                                                        <div class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-94582d2 elementor-widget elementor-widget-heading"
-                                                                 data-id="94582d2"
-                                                                 data-element_type="widget"
-                                                                 data-widget_type="heading.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <h5 class="elementor-heading-title elementor-size-default">
-                                                                        Contains Ribbons:
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-a4a8a5f"
-                                                         data-id="a4a8a5f"
-                                                         data-element_type="column">
-                                                        <div class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-c07d27e elementor-widget elementor-widget-text-editor"
-                                                                 data-id="c07d27e"
-                                                                 data-element_type="widget"
-                                                                 data-widget_type="text-editor.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <p>Whatever</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    
                                                 </div>
                                             </section>
                                         </div>
                                     </div>
                                 </div>
                             </section>
+                                </a>
+                                }
+                            }
+                            else
+                            {
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-b4b4dbe elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                         data-id="b4b4dbe"
+                                         data-element_type="section"
+                                         data-settings='{"background_background":"classic"}'>
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-655657f"
+                                             data-id="655657f"
+                                             data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-43b0fda elementor-widget elementor-widget-text-editor"
+                                                     data-id="43b0fda"
+                                                     data-element_type="widget"
+                                                     data-widget_type="text-editor.default">
+                                                    <div class="elementor-widget-container">
+                                                        <style>
+                                                            /*! elementor - v3.12.1 - 02-04-2023 */
+                                                            .elementor-widget-text-editor.elementor-drop-cap-view-stacked
+                                                            .elementor-drop-cap {
+                                                                background-color: #69727d;
+                                                                color: #fff;
+                                                            }
+
+                                                            .elementor-widget-text-editor.elementor-drop-cap-view-framed
+                                                            .elementor-drop-cap {
+                                                                color: #69727d;
+                                                                border: 3px solid;
+                                                                background-color: transparent;
+                                                            }
+
+                                                            .elementor-widget-text-editor:not( .elementor-drop-cap-view-default )
+                                                            .elementor-drop-cap {
+                                                                margin-top: 8px;
+                                                            }
+
+                                                            .elementor-widget-text-editor:not( .elementor-drop-cap-view-default )
+                                                            .elementor-drop-cap-letter {
+                                                                width: 1em;
+                                                                height: 1em;
+                                                            }
+
+                                                            .elementor-widget-text-editor
+                                                            .elementor-drop-cap {
+                                                                float: left;
+                                                                text-align: center;
+                                                                line-height: 1;
+                                                                font-size: 50px;
+                                                            }
+
+                                                            .elementor-widget-text-editor
+                                                            .elementor-drop-cap-letter {
+                                                                display: inline-block;
+                                                            }
+                                                        </style>
+                                                        <p>No Records Returned From Filters.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            }
+                            <div style="display: flex; align-items: center; justify-content: center; font-size: 22px">
+                                @for (int i = 1; i < Model.Records.PageCount; i++)
+                                {
+                                    <a asp-route-pageNum="@i">@i&nbsp;</a>
+                                }
+                            </div>
+
                         </div>
                     </div>
                     <!-- .entry-content .clear -->
