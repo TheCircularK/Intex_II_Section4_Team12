@@ -16,8 +16,9 @@ namespace Intex_II_Section4_Team12.Pages
             _repo = temp;
         }
 
-        public void OnGet()
+        public void OnGet(int pageNum = 1)
         {
+            _request.PageNum = pageNum;
             Records = _repo.GetFiltered(_request);
         }
 

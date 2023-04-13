@@ -5608,9 +5608,13 @@
                                     </div>
                                 </section>
                             }
+                            <div style="display: flex; align-items: center; justify-content: center; font-size: 22px">
+                                @for (int i = 1; i < Model.Records.PageCount; i++)
+                                {
+                                    <a asp-route-pageNum="@i">@i&nbsp;</a>
+                                }
+                            </div>
 
-
-                            <!--Card-->
                         </div>
                     </div>
                     <!-- .entry-content .clear -->
