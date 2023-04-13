@@ -135,7 +135,7 @@ using (var scope = app.Services.CreateScope())
     };
 
     // Register the user
-    var result = await userManager.CreateAsync(user, "Password123!");
+    var result = await userManager.CreateAsync(user, "PasswordPassword123!");
 
     // If the user is successfully created, assign the "Admin" role to the user
     if (result.Succeeded)
