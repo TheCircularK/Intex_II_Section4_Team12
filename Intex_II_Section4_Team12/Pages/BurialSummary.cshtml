@@ -5124,7 +5124,8 @@
                             {                                
                                 @foreach (var record in Model.Records.BurialRecords)
                             {
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-fcf99ec elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                <a asp-page="/Details" asp-route-id="@record.Id" >
+                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-fcf99ec elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                      data-id="fcf99ec"
                                      data-element_type="section"
                                      data-settings='{"background_background":"classic"}'>
@@ -5541,7 +5542,7 @@
                                     </div>
                                 </div>
                             </section>
-
+                                </a>
                                 }
                             }
                             else

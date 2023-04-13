@@ -329,9 +329,11 @@
                                                                 <a asp-page="/Unsupervised"
                                                                    class="menu-link">Unsupervised Analysis</a>
                                                             </li>
-                                                            <li id="menu-item-1159"
+                                                            @if (User.IsInRole("Admin") || (User.IsInRole("Researcher")))
+                                                            {
+                                                                <li id="menu-item-1159"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1159">
-                                                                <a asp-page="/GoAdmin"
+                                                                <a asp-page="/Index"
                                                                    class="menu-link">
                                                                     Admin
                                                                     <span role="application"
@@ -376,7 +378,9 @@
                                                                     </span>
                                                                 </button>
                                                                 <ul class="sub-menu">
-                                                                    <li id="menu-item-1197"
+                                                                    @if (User.IsInRole("Admin"))
+                                                                    {                                                            
+                                                                        <li id="menu-item-1197"
                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197">
                                                                         <a asp-page="/GoAdmin"
                                                                            class="menu-link">
@@ -397,10 +401,11 @@
                                                                             </span>
                                                                             User Roles
                                                                         </a>
-                                                                    </li>
+                                                                            </li>
+                                                                    }
                                                                     <li id="menu-item-1215"
                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1215">
-                                                                        <a asp-page="/DatabaseManagement"
+                                                                        <a asp-page="/DatabaseAdmin"
                                                                            class="menu-link">
                                                                             <span class="ast-icon icon-arrow">
                                                                                 <svg class="ast-arrow-svg"
@@ -422,6 +427,7 @@
                                                                     </li>
                                                                 </ul>
                                                             </li>
+                                                            }                                                            
                                                         </ul>
                                                     </div>
                                                 </nav>
@@ -542,8 +548,10 @@
                                                 <a asp-page="/Unsupervised"
                                                    class="menu-link">Unsupervised Analysis</a>
                                             </li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1159">
-                                                <a asp-page="/GoAdmin" class="menu-link">
+                                            @if (User.IsInRole("Admin") || User.IsInRole("Researcher"))
+                                            {
+                                               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1159">
+                                                <a asp-page="/Index" class="menu-link">
                                                     Admin
                                                     <span role="application"
                                                           class="dropdown-menu-toggle ast-header-navigation-arrow"
@@ -586,26 +594,29 @@
                                                     </span>
                                                 </button>
                                                 <ul class="sub-menu">
-                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197">
-                                                        <a asp-page="/GoAdmin" class="menu-link">
-                                                            <span class="ast-icon icon-arrow">
-                                                                <svg class="ast-arrow-svg"
-                                                                     xmlns="http://www.w3.org/2000/svg"
-                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                     version="1.1"
-                                                                     x="0px"
-                                                                     y="0px"
-                                                                     width="26px"
-                                                                     height="16.043px"
-                                                                     viewbox="57 35.171 26 16.043"
-                                                                     enable-background="new 57 35.171 26 16.043"
-                                                                     xml:space="preserve">
-                                                                <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
-                                  </svg>
-                                                            </span>
-                                                            User Roles
-                                                        </a>
-                                                    </li>
+                                                    @if (User.IsInRole("Admin"))
+                                                    {
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197">
+                                                                <a asp-page="/GoAdmin" class="menu-link">
+                                                                    <span class="ast-icon icon-arrow">
+                                                                        <svg class="ast-arrow-svg"
+                                                                             xmlns="http://www.w3.org/2000/svg"
+                                                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                             version="1.1"
+                                                                             x="0px"
+                                                                             y="0px"
+                                                                             width="26px"
+                                                                             height="16.043px"
+                                                                             viewbox="57 35.171 26 16.043"
+                                                                             enable-background="new 57 35.171 26 16.043"
+                                                                             xml:space="preserve">
+                                                                        <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+                                          </svg>
+                                                                    </span>
+                                                                    User Roles
+                                                                </a>
+                                                            </li>
+                                                    }
                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1215">
                                                         <a asp-page="/DatabaseManagement"
                                                            class="menu-link">
@@ -628,7 +639,8 @@
                                                         </a>
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> 
+                                            } 
                                         </ul>
                                     </div>
                                 </nav>
