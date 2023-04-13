@@ -34,6 +34,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddScoped<IMummyRepository, MummyRepository>();
+builder.Services.AddScoped<IRecordRepository, RecordRepository>();
 
 // Cookie Policy
 builder.Services.Configure<CookiePolicyOptions>(options =>

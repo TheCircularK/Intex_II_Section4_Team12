@@ -291,7 +291,7 @@ namespace Intex_II_Section4_Team12.Context
                 entity.ToTable("burialmain");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("id");
 
                 entity.Property(e => e.Adultsubadult)
@@ -740,7 +740,7 @@ namespace Intex_II_Section4_Team12.Context
                 entity.ToTable("textile");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("id");
 
                 entity.Property(e => e.Burialnumber)
