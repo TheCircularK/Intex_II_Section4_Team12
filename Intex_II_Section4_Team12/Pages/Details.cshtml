@@ -220,6 +220,11 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Burialmain?.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    @if (User.IsInRole("Admin") || (User.IsInRole("Researcher")))
+    {
+        <a asp-page="./Edit" asp-route-id="@Model.Burialmain?.Id">Edit</a>
+
+        <span>&nbsp;|&nbsp;</span>
+    }    
+    <a asp-page="./DatabaseAdmin">Back to List</a>
 </div>
