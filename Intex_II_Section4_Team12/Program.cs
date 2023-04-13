@@ -46,6 +46,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 
 builder.Services.AddScoped<IMummyRepository, MummyRepository>();
 builder.Services.AddScoped<IRecordRepository, RecordRepository>();
+builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
 
 // Cookie Policy
 builder.Services.Configure<CookiePolicyOptions>(options =>

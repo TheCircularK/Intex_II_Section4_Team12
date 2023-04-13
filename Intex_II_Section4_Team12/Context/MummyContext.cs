@@ -715,6 +715,7 @@ namespace Intex_II_Section4_Team12.Context
 
             modelBuilder.Entity<PhotoInfo>(entity =>
             {
+                entity.HasNoKey();
                 entity.ToTable("photo_info");
 
                 entity.Property(e => e.PhotoFileName)
