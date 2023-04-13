@@ -58,11 +58,16 @@ namespace Intex_II_Section4_Team12.Repositories
             return burials;
         }
 
+        /// <summary>
+        /// Get all records paged. Requires a filter.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public FilteredRecordsWithPages GetFiltered(FilteredRecordRequest request)
         {
             if (request.PageNum == 0) { request.PageNum = 1; }
 
-            var numToSkip = (request.PageNum - 1) / pageSize;
+            var numToSkip = (request.PageNum - 1) * pageSize;
 
             IQueryable<Burialmain> burials;
 
@@ -183,7 +188,7 @@ namespace Intex_II_Section4_Team12.Repositories
                 .Take(pageSize)
                 .ToList();
 
-            var numPages = burialList.Count / pageSize;
+            var numPages = burials.Count() / pageSize;
             if (numPages == 0) { numPages = 1; }
 
             FilteredRecordsWithPages response = new FilteredRecordsWithPages(burialList, request.PageNum, numPages);

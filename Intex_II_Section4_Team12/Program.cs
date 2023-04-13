@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.ML.OnnxRuntime;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,6 +36,9 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 
 builder.Services.AddScoped<IMummyRepository, MummyRepository>();
 builder.Services.AddScoped<IRecordRepository, RecordRepository>();
+
+builder.Services.AddSingleton<InferenceSession>(
+    new InferenceSession("ML/supervised.onnx"));
 
 // Cookie Policy
 builder.Services.Configure<CookiePolicyOptions>(options =>
