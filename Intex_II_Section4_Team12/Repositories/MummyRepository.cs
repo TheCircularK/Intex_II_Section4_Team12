@@ -68,7 +68,7 @@ namespace Intex_II_Section4_Team12.Repositories
 
             burials = _context
                 .Set<Burialmain>()
-                //.Include(b => b.BodyAnalysisCharts)
+                .Include(b => b.BodyAnalysisCharts)
                 .Include(b => b.MainTextiles)
                     .ThenInclude(t => t.MainStructures)
                 .Include(b => b.MainTextiles)
@@ -107,8 +107,13 @@ namespace Intex_II_Section4_Team12.Repositories
                         ageList.Add(age);
                     }
                 }
-                burials = burials
-                    .Where(b => ageList.Contains(b.Ageatdeath));
+
+                if (ageList.Count > 0)
+                {
+                    burials = burials
+                        .Where(b => ageList.Contains(b.Ageatdeath));
+                }
+                
             }
 
             //Head direction

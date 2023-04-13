@@ -177,87 +177,111 @@ namespace Intex_II_Section4_Team12.Context
 
                 entity.ToTable("bodyanalysischart");
 
-                entity.Property(e => e.Area).HasColumnType("character varying");
+                entity.Property(e => e.Area)
+                    .HasColumnType("character varying")
+                    .HasColumnName("area");
 
-                entity.Property(e => e.BurialNumber).HasColumnType("character varying");
+                entity.Property(e => e.BurialNumber)
+                    .HasColumnType("character varying")
+                    .HasColumnName("burialnumber");
 
                 entity.Property(e => e.CariesPeriodontalDisease)
                     .HasColumnType("character varying")
-                    .HasColumnName("Caries_Periodontal_Disease");
+                    .HasColumnName("caries_periodontal_disease");
 
-                entity.Property(e => e.DateofExamination).HasColumnType("character varying");
+                entity.Property(e => e.DateofExamination)
+                    .HasColumnType("character varying")
+                    .HasColumnName("dateofexamination");
 
                 entity.Property(e => e.DorsalPittingBoolean)
                     .HasColumnType("character varying")
-                    .HasColumnName("DorsalPitting (boolean)");
+                    .HasColumnName("dorsalpitting");
 
-                entity.Property(e => e.EastWest).HasColumnType("character varying");
+                entity.Property(e => e.EastWest)
+                    .HasColumnType("character varying")
+                    .HasColumnName("eastwest");
 
-                entity.Property(e => e.EstimateStature).HasColumnType("character varying");
+                entity.Property(e => e.PreservationIndex)
+                    .HasColumnType("int")
+                    .HasColumnName("preservationindex");
 
-                entity.Property(e => e.Femur).HasColumnType("character varying");
+                entity.Property(e => e.Tibia)
+                    .HasColumnType("double")
+                    .HasColumnName("tibia");
 
-                entity.Property(e => e.Gonion).HasColumnType("character varying");
+                entity.Property(e => e.EstimateStature).HasColumnType("character varying").HasColumnName("estimatestature");
 
-                entity.Property(e => e.HairColor).HasColumnType("character varying");
+                entity.Property(e => e.Femur).HasColumnType("character varying").HasColumnName("femur");
 
-                entity.Property(e => e.Humerus).HasColumnType("character varying");
+                entity.Property(e => e.FemurHeadDiameter).HasColumnType("double").HasColumnName("femurheaddiameter");
 
-                entity.Property(e => e.LamboidSuture).HasColumnType("character varying");
+                entity.Property(e => e.FemurLength).HasColumnType("double").HasColumnName("femurlength");
+
+                entity.Property(e => e.Gonion).HasColumnType("character varying").HasColumnName("gonion");
+
+                entity.Property(e => e.HairColor).HasColumnType("character varying").HasColumnName("haircolor");
+
+                entity.Property(e => e.Humerus).HasColumnType("character varying").HasColumnName("humerus");
+
+                entity.Property(e => e.HumerusHeadDiameter).HasColumnType("double").HasColumnName("humerusheaddiameter");
+                
+                entity.Property(e => e.HumerusLength).HasColumnType("double").HasColumnName("humeruslength");
+
+                entity.Property(e => e.LamboidSuture).HasColumnType("character varying").HasColumnName("lamboidsuture");
 
                 entity.Property(e => e.MedialIpRamus)
                     .HasColumnType("character varying")
-                    .HasColumnName("Medial_IP_Ramus");
+                    .HasColumnName("medial_ip_ramus");
 
-                entity.Property(e => e.NorthSouth).HasColumnType("character varying");
+                entity.Property(e => e.NorthSouth).HasColumnType("character varying").HasColumnName("northsouth");
 
-                entity.Property(e => e.Notes).HasColumnType("character varying");
+                entity.Property(e => e.Notes).HasColumnType("character varying").HasColumnName("notes");
 
-                entity.Property(e => e.NuchalCrest).HasColumnType("character varying");
+                entity.Property(e => e.NuchalCrest).HasColumnType("character varying").HasColumnName("nuchalcrest");
 
-                entity.Property(e => e.Observations).HasColumnType("character varying");
+                entity.Property(e => e.Observations).HasColumnType("character varying").HasColumnName("observations");
 
-                entity.Property(e => e.OrbitEdge).HasColumnType("character varying");
+                entity.Property(e => e.OrbitEdge).HasColumnType("character varying").HasColumnName("orbitedge");
 
-                entity.Property(e => e.Osteophytosis).HasColumnType("character varying");
+                entity.Property(e => e.Osteophytosis).HasColumnType("character varying").HasColumnName("osteophytosis");
 
-                entity.Property(e => e.ParietalBossing).HasColumnType("character varying");
+                entity.Property(e => e.ParietalBossing).HasColumnType("character varying").HasColumnName("parietalbossing");
 
                 entity.Property(e => e.PreauricularSulcusBoolean)
                     .HasColumnType("character varying")
-                    .HasColumnName("PreauricularSulcus (Boolean)");
+                    .HasColumnName("preauricularsulcus");
 
-                entity.Property(e => e.PubicBone).HasColumnType("character varying");
+                entity.Property(e => e.PubicBone).HasColumnType("character varying").HasColumnName("pubicbone");
 
-                entity.Property(e => e.Robust).HasColumnType("character varying");
+                entity.Property(e => e.Robust).HasColumnType("character varying").HasColumnName("robust");
 
-                entity.Property(e => e.SciaticNotch).HasColumnType("character varying");
+                entity.Property(e => e.SciaticNotch).HasColumnType("character varying").HasColumnName("sciaticnotch");
 
-                entity.Property(e => e.SphenooccipitalSynchrondrosis).HasColumnType("character varying");
+                entity.Property(e => e.SphenooccipitalSynchrondrosis).HasColumnType("character varying").HasColumnName("sphenooccipitalsynchrondrosis");
 
-                entity.Property(e => e.SquamosSuture).HasColumnType("character varying");
+                entity.Property(e => e.SquamosSuture).HasColumnType("character varying").HasColumnName("squamossuture");
 
-                entity.Property(e => e.SquareEastWest).HasColumnType("character varying");
+                entity.Property(e => e.SquareEastWest).HasColumnType("character varying").HasColumnName("squareeastwest");
 
-                entity.Property(e => e.SquareNorthSouth).HasColumnType("character varying");
+                entity.Property(e => e.SquareNorthSouth).HasColumnType("character varying").HasColumnName("squarenorthsouth");
 
-                entity.Property(e => e.SubpubicAngle).HasColumnType("character varying");
+                entity.Property(e => e.SubpubicAngle).HasColumnType("character varying").HasColumnName("subpubicangle");
 
-                entity.Property(e => e.SupraorbitalRidges).HasColumnType("character varying");
+                entity.Property(e => e.SupraorbitalRidges).HasColumnType("character varying").HasColumnName("supraorbitalridges");
 
-                entity.Property(e => e.ToothAttrition).HasColumnType("character varying");
+                entity.Property(e => e.ToothAttrition).HasColumnType("character varying").HasColumnName("toothattrition");
 
-                entity.Property(e => e.ToothEruption).HasColumnType("character varying");
+                entity.Property(e => e.ToothEruption).HasColumnType("character varying").HasColumnName("tootheruption");
 
-                entity.Property(e => e.ToothEruptionAgeEstimate).HasColumnType("character varying");
+                entity.Property(e => e.ToothEruptionAgeEstimate).HasColumnType("character varying").HasColumnName("tootheruptionageestimate");
 
-                entity.Property(e => e.VentralArc).HasColumnType("character varying");
+                entity.Property(e => e.VentralArc).HasColumnType("character varying").HasColumnName("ventralarc");
 
-                entity.Property(e => e.ZygomaticCrest).HasColumnType("character varying");
+                entity.Property(e => e.ZygomaticCrest).HasColumnType("character varying").HasColumnName("zygomaticcrest");
 
                 entity.Property(e => e.BurialMainId)
                     .HasColumnType("double")
-                    .HasColumnName("BurialMainId");
+                    .HasColumnName("burialmainid");
 
                 entity.HasOne(d => d.BurialMain)
                     .WithMany()
