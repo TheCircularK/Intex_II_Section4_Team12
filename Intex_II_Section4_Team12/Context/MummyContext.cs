@@ -30,6 +30,7 @@ namespace Intex_II_Section4_Team12.Context
         public virtual DbSet<Newsarticle> Newsarticles { get; set; } = null!;
         public virtual DbSet<Photodatum> Photodata { get; set; } = null!;
         public virtual DbSet<Photoform> Photoforms { get; set; } = null!;
+        public virtual DbSet<PhotoInfo> PhotoInfo { get; set; } = null!;
         public virtual DbSet<Structure> Structures { get; set; } = null!;
         public virtual DbSet<Teammember> Teammembers { get; set; } = null!;
         public virtual DbSet<Textile> Textiles { get; set; } = null!;
@@ -710,6 +711,52 @@ namespace Intex_II_Section4_Team12.Context
                 entity.Property(e => e.Tableassociation)
                     .HasMaxLength(10)
                     .HasColumnName("tableassociation");
+            });
+
+            modelBuilder.Entity<PhotoInfo>(entity =>
+            {
+                entity.HasNoKey();
+                entity.ToTable("photo_info");
+
+                entity.Property(e => e.PhotoFileName)
+                    .HasColumnType("string")
+                    .HasColumnName("photofilename");
+
+                entity.Property(e => e.OriginalFileName)
+                    .HasColumnType("string")
+                    .HasColumnName("originalfilename");
+
+                entity.Property(e => e.Photographer)
+                    .HasColumnType("string")
+                    .HasColumnName("photographer");
+
+                entity.Property(e => e.PhotoDate)
+                    .HasColumnType("string")
+                    .HasColumnName("photodate");
+
+                entity.Property(e => e.SquareNorthSouth)
+                    .HasColumnType("string")
+                    .HasColumnName("squarenorthsouth");
+
+                entity.Property(e => e.NorthSouth)
+                    .HasColumnType("string")
+                    .HasColumnName("northsouth");
+
+                entity.Property(e => e.SquareEastWest)
+                    .HasColumnType("string")
+                    .HasColumnName("squareeastwest");
+
+                entity.Property(e => e.EastWest)
+                    .HasColumnType("string")
+                    .HasColumnName("eastwest");
+
+                entity.Property(e => e.Area)
+                    .HasColumnType("string")
+                    .HasColumnName("area");
+
+                entity.Property(e => e.BurialNumber)
+                    .HasColumnType("string")
+                    .HasColumnName("burialnumber");
             });
 
             modelBuilder.Entity<Structure>(entity =>

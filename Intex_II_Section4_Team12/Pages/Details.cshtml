@@ -180,6 +180,11 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Burialmain.Photos)
+            @foreach (var photo in Model.PhotoNames)
+            {
+                var imageUrl = photo + ".jpg";
+                <a target="_blank" href="~/burial-images/@imageUrl"><img width="150" src="~/burial-images/@imageUrl"/></a>
+            }
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Burialmain.Hair)
