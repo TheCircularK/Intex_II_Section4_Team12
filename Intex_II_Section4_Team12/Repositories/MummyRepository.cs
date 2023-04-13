@@ -68,7 +68,7 @@ namespace Intex_II_Section4_Team12.Repositories
 
             burials = _context
                 .Set<Burialmain>()
-                //.Include(b => b.BodyAnalysisCharts)
+                .Include(b => b.BodyAnalysisCharts)
                 .Include(b => b.MainTextiles)
                     .ThenInclude(t => t.MainStructures)
                 .Include(b => b.MainTextiles)
@@ -99,8 +99,21 @@ namespace Intex_II_Section4_Team12.Repositories
             //Age at Death
             if (request.AgeAtDeath.Count > 0)
             {
-                burials = burials
-                    .Where(b => request.AgeAtDeath.Contains(b.Ageatdeath)); 
+                var ageList = new List<string>();
+                foreach (var age in request.AgeAtDeath)
+                {
+                    if (age != "")
+                    {
+                        ageList.Add(age);
+                    }
+                }
+
+                if (ageList.Count > 0)
+                {
+                    burials = burials
+                        .Where(b => ageList.Contains(b.Ageatdeath));
+                }
+                
             }
 
             //Head direction
@@ -126,13 +139,13 @@ namespace Intex_II_Section4_Team12.Repositories
 
             //BODY ANALYSIS
             //Stature
-            //if (!String.IsNullOrEmpty(request.EstimateStature))
-            //{
-            //    burials = burials
-            //        .Where(b => b.BodyAnalysisCharts
-            //            .Any(c => c.EstimateStature
-            //                .Contains(request.EstimateStature, StringComparison.CurrentCultureIgnoreCase)));
-            //}
+            if (!String.IsNullOrEmpty(request.EstimateStature))
+            {
+                burials = burials
+                    .Where(b => b.BodyAnalysisCharts
+                        .Any(c => c.EstimateStature
+                            .Contains(request.EstimateStature)));
+            }
 
 
             //TEXTILE FUNCTIONS

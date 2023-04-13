@@ -4876,12 +4876,8 @@
                                                                             <option value="" selected></option>
                                                                             <option value="A">Adult</option>
                                                                             <option value="C">Child</option>
-                                                                            <option value="I">
-                                                                                Infant
-                                                                            </option>
-                                                                            <option value="N">
-                                                                                New Born
-                                                                            </option>
+                                                                            <option value="I">Infant</option>
+                                                                            <option value="N">New Born</option>
                                                                         </select>
                                                                     </div>
                                                                     <div id="wpforms-1117-field_14-container"
@@ -4950,11 +4946,9 @@
                                                                                 class="wpforms-field-small"
                                                                                 name="wpforms[fields][13]">
                                                                             <option value="" selected></option>
-                                                                            <option value="East">East</option>
-                                                                            <option value="West">West</option>
-                                                                            <option value="Not Determined">
-                                                                                Not Determined
-                                                                            </option>
+                                                                            <option value="E">East</option>
+                                                                            <option value="W">West</option>
+                                                                            <option value="I">Not Determined</option>
                                                                         </select>
                                                                     </div>
                                                                     <div id="wpforms-1119-field_14-container"
@@ -4966,18 +4960,12 @@
                                                                                 class="wpforms-field-small"
                                                                                 name="wpforms[fields][14]">
                                                                             <option value="" selected></option>
-                                                                            <option value="Brown">Brown</option>
-                                                                            <option value="Black">Black</option>
-                                                                            <option value="Brown-Red">
-                                                                                Brown-Red
-                                                                            </option>
-                                                                            <option value="Red/Red-Bl">
-                                                                                Red/Red-Bl
-                                                                            </option>
-                                                                            <option value="Blond">Blond</option>
-                                                                            <option value="Unknown">
-                                                                                Unknown
-                                                                            </option>
+                                                                            <option value="B">Brown</option>
+                                                                            <option value="K">Black</option>
+                                                                            <option value="A">Brown-Red</option>
+                                                                            <option value="R">Red/Red-Bl</option>
+                                                                            <option value="D">Blond</option>
+                                                                            <option value="U">Unknown</option>
                                                                         </select>
                                                                     </div>
                                                                 </div>
@@ -5043,12 +5031,8 @@
                                                                                 >
                                                                             <option value="" selected></option>
                                                                             <option value="M">Male</option>
-                                                                            <option value="F">
-                                                                                Female
-                                                                            </option>
-                                                                            <option value="Not Determined">
-                                                                                Not Determined
-                                                                            </option>
+                                                                            <option value="F">Female</option>
+                                                                            <option value="Not Determined">Not Determined</option>
                                                                         </select>
                                                                     </div>
                                                                     <div id="wpforms-1121-field_11-container"
@@ -5062,9 +5046,7 @@
                                                                             <option value="" selected></option>
                                                                             <option value="Heavy">Heavy</option>
                                                                             <option value="None">None</option>
-                                                                            <option value="Slight">
-                                                                                Slight
-                                                                            </option>
+                                                                            <option value="Slight">Slight</option>
                                                                         </select>
                                                                     </div>
                                                                     <div id="wpforms-1121-field_12-container"
@@ -5393,7 +5375,12 @@
                                                                  data-element_type="widget"
                                                                  data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <p>Whatever</p>
+                                                                   <p>
+                                                                   @foreach (var chart in record.BodyAnalysisCharts)
+                                                                   {
+                                                                       <span>@chart.EstimateStature</span>
+                                                                   }
+                                                                   </p>             
                                                                 </div>
                                                             </div>
                                                         </div>

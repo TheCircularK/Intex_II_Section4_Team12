@@ -61,7 +61,7 @@ namespace Intex_II_Section4_Team12.Pages
             }
             else
             {
-                _request.FaceBundles = "N";
+                _request.FaceBundles = null;
             }
 
             _request.TextileStructure = Request.Form["TextileStructure"];

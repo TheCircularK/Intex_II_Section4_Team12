@@ -4994,6 +4994,11 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Burialmain.Photos)
+            @foreach (var photo in Model.PhotoNames)
+            {
+                var imageUrl = photo + ".jpg";
+                <a target="_blank" href="~/burial-images/@imageUrl"><img width="150" src="~/burial-images/@imageUrl"/></a>
+            }
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Burialmain.Hair)
@@ -5034,8 +5039,13 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Burialmain?.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    @if (User.IsInRole("Admin") || (User.IsInRole("Researcher")))
+    {
+        <a asp-page="./Edit" asp-route-id="@Model.Burialmain?.Id">Edit</a>
+
+        <span>&nbsp;|&nbsp;</span>
+    }    
+    <a asp-page="./DatabaseAdmin">Back to List</a>
 </div>
 
                             </section>

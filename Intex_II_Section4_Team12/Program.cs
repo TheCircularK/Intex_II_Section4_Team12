@@ -46,6 +46,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 
 builder.Services.AddScoped<IMummyRepository, MummyRepository>();
 builder.Services.AddScoped<IRecordRepository, RecordRepository>();
+builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
 
 // Cookie Policy
 builder.Services.Configure<CookiePolicyOptions>(options =>
@@ -135,7 +136,7 @@ using (var scope = app.Services.CreateScope())
     };
 
     // Register the user
-    var result = await userManager.CreateAsync(user, "Password123!");
+    var result = await userManager.CreateAsync(user, "PasswordPassword123!");
 
     // If the user is successfully created, assign the "Admin" role to the user
     if (result.Succeeded)
