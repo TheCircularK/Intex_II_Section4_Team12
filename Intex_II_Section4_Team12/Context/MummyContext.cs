@@ -255,6 +255,10 @@ namespace Intex_II_Section4_Team12.Context
 
                 entity.Property(e => e.ZygomaticCrest).HasColumnType("character varying");
 
+                entity.Property(e => e.BurialMainId)
+                    .HasColumnType("double")
+                    .HasColumnName("BurialMainId");
+
                 entity.HasOne(d => d.BurialMain)
                     .WithMany()
                     .HasForeignKey(d => d.BurialMainId)

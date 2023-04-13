@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Intex_II_Section4_Team12.Models
 {
@@ -11,6 +13,8 @@ namespace Intex_II_Section4_Team12.Models
             BodyAnalysisCharts = new HashSet<Bodyanalysischart>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
         public string? Squarenorthsouth { get; set; }
         public string? Headdirection { get; set; }
