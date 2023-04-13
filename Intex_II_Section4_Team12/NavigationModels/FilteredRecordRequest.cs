@@ -7,7 +7,7 @@
             PageNum = pageNum;
         }
 
-        public List<string>? Sexes { get; set; } = new();
+        public string? Sex { get; set; }
 
         public float? MinBurialDepth { get; set; } = new();
         public float? MaxBurialDepth { get; set; } = new();
@@ -16,7 +16,7 @@
 
         public List<string>? AgeAtDeath { get; set; } = new();
 
-        public List<string>? HeadDirections { get; set; } = new();
+        public string? HeadDirection { get; set; }
 
         public string? BurialId { get; set; }
 

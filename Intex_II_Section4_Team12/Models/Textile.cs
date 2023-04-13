@@ -21,7 +21,7 @@ namespace Intex_II_Section4_Team12.Models
         public long Id { get; set; }
         public string? Locale { get; set; }
         public int? Textileid { get; set; }
-        public string? Description { get; set; }
+        public string? Description { get; set; } = "";
         public string? Burialnumber { get; set; }
         public string? Estimatedperiod { get; set; }
         public DateTime? Sampledate { get; set; }

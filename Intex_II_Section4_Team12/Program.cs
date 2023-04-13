@@ -1,6 +1,7 @@
 using Intex_II_Section4_Team12.Context;
 using Intex_II_Section4_Team12.Data;
 using Intex_II_Section4_Team12.Repositories;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -67,6 +68,9 @@ app.UseAuthorization();
 
 app.UseRouting();
 
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
@@ -77,13 +81,11 @@ app.UseEndpoints(endpoints =>
     endpoints.MapDefaultControllerRoute();
 
     endpoints.MapRazorPages();
+});
 
 app.UseCookiePolicy();
 
-app.UseRouting();
 
-app.UseAuthentication();
-app.UseAuthorization();
 
 app.Use(async (context, next) =>
 {
