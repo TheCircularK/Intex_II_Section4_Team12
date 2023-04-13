@@ -42,7 +42,7 @@ namespace Intex_II_Section4_Team12.Pages
             _context.Burialmains.Add(Burialmain);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./DatabaseAdmin");
         }
     }
 }

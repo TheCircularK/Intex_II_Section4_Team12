@@ -69,7 +69,7 @@ namespace Intex_II_Section4_Team12.Pages
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./DatabaseAdmin");
         }
 
         private bool BurialmainExists(long id)

@@ -60,7 +60,7 @@ namespace Intex_II_Section4_Team12.Pages
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./DatabaseAdmin");
         }
     }
 }
