@@ -108,7 +108,7 @@ app.Use(async (context, next) =>
     await next();
 });
 
-// Admin Account Setup
+// Admin Account Setup - This ensures there is always an admin account created
 using (var scope = app.Services.CreateScope())
 {
     var serviceProvider = scope.ServiceProvider;

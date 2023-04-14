@@ -12,7 +12,6 @@ using System.Data;
 using Intex_II_Section4_Team12.Repositories;
 namespace Intex_II_Section4_Team12.Pages
 {
-    [Authorize(Roles = "Admin, Researcher")]
     public class DetailsModel : PageModel
     {
         private readonly Intex_II_Section4_Team12.Context.MummyContext _context;
