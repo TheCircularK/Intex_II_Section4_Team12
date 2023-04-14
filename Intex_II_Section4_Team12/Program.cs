@@ -1,5 +1,6 @@
 using Intex_II_Section4_Team12.Context;
 using Intex_II_Section4_Team12.Data;
+using Intex_II_Section4_Team12.Models;
 using Intex_II_Section4_Team12.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http.Json;
@@ -39,13 +40,15 @@ var mummyConnectionString = builder.Configuration.GetConnectionString("MummyConn
 builder.Services.AddDbContext<MummyContext>(options =>
     options.UseNpgsql(mummyConnectionString));
 
-
 //Scoped services
 builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddScoped<IMummyRepository, MummyRepository>();
 builder.Services.AddScoped<IRecordRepository, RecordRepository>();
+builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
+
+builder.Services.AddScoped<MyApiRequestData>();
 
 // Cookie Policy
 builder.Services.Configure<CookiePolicyOptions>(options =>
