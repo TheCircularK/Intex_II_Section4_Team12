@@ -1,16 +1,10 @@
 ﻿@model string
 
 @if (!String.IsNullOrEmpty(Model))
-{   
-    <style>
-        .centercss {
-        text - align: center;
-    }
-    </style>
+{
     var statusMessageClass = Model.StartsWith("Error") ? "danger" : "success";
-    <div class="centercss">
     <div class="alert alert-@statusMessageClass alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         @Model
-    </div>
     </div>
 }
