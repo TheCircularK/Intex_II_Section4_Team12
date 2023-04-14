@@ -4854,7 +4854,8 @@
                                                                                for="wpforms-1117-field_11">Textile Color</label><input type="text"
                                                                                                                                        id="wpforms-1117-field_11"
                                                                                                                                        class="wpforms-field-small"
-                                                                                                                                       name="TextileColor" />
+                                                                                                                                       name="TextileColor"
+                                                                                                                                       value="@Model.Request.TextileColor"/>
                                                                     </div>
                                                                     <div id="wpforms-1117-field_12-container"
                                                                          class="wpforms-field wpforms-field-text"
@@ -4863,7 +4864,8 @@
                                                                                for="wpforms-1117-field_12">Minimum Burial Depth</label><input type="number" step="0.01"
                                                                                                                                               id="wpforms-1117-field_12"
                                                                                                                                               class="wpforms-field-small"
-                                                                                                                                              name="MinBurialDepth" />
+                                                                                                                                              name="MinBurialDepth"
+                                                                                                                                              value="@Model.Request.MinBurialDepth"/>
                                                                     </div>
                                                                     <div id="wpforms-1117-field_13-container"
                                                                          class="wpforms-field wpforms-field-select wpforms-field-select-style-classic"
@@ -4872,7 +4874,8 @@
                                                                                for="wpforms-1117-field_13">Age at Death</label>
                                                                         <select multiple id="wpforms-1117-field_13"
                                                                                 class="wpforms-field-small"
-                                                                                name="AgeAtDeath">
+                                                                                name="AgeAtDeath"
+                                                                                value="@Model.Request.AgeAtDeath">
                                                                             <option value="" selected></option>
                                                                             <option value="A">Adult</option>
                                                                             <option value="C">Child</option>
@@ -4887,7 +4890,8 @@
                                                                                for="wpforms-1117-field_14">Textile Function</label><input type="text"
                                                                                                                                           id="wpforms-1117-field_14"
                                                                                                                                           class="wpforms-field-small"
-                                                                                                                                          name="TextileFunction" />
+                                                                                                                                          name="TextileFunction"
+                                                                                                                                          value="@Model.Request.TextileFunction"/>
                                                                     </div>
                                                                 </div>
                                                                 <!-- .wpforms-field-container -->
@@ -4926,7 +4930,8 @@
                                                                                for="wpforms-1119-field_11">Textile Structure</label><input type="text"
                                                                                                                                            id="wpforms-1119-field_11"
                                                                                                                                            class="wpforms-field-small"
-                                                                                                                                           name="TextileStructure" />
+                                                                                                                                           name="TextileStructure"
+                                                                                                                                           value="@Model.Request.TextileStructure"/>
                                                                     </div>
                                                                     <div id="wpforms-1119-field_12-container"
                                                                          class="wpforms-field wpforms-field-text"
@@ -4935,7 +4940,8 @@
                                                                                for="wpforms-1119-field_12">Maximum Burial Depth</label><input type="number" step="0.01"
                                                                                                                                               id="wpforms-1119-field_12"
                                                                                                                                               class="wpforms-field-small"
-                                                                                                                                              name="MaxBurialDepth" />
+                                                                                                                                              name="MaxBurialDepth"
+                                                                                                                                              value="@Model.Request.MaxBurialDepth"/>
                                                                     </div>
                                                                     <div id="wpforms-1119-field_13-container"
                                                                          class="wpforms-field wpforms-field-select wpforms-field-select-style-classic"
@@ -4944,7 +4950,8 @@
                                                                                for="wpforms-1119-field_13">Head Direction</label>
                                                                         <select id="wpforms-1119-field_13"
                                                                                 class="wpforms-field-small"
-                                                                                name="wpforms[fields][13]">
+                                                                                name="wpforms[fields][13]"
+                                                                                value="@Model.Request.HeadDirection">
                                                                             <option value="" selected></option>
                                                                             <option value="E">East</option>
                                                                             <option value="W">West</option>
@@ -4958,7 +4965,8 @@
                                                                                for="wpforms-1119-field_14">Hair Color</label>
                                                                         <select id="wpforms-1119-field_14"
                                                                                 class="wpforms-field-small"
-                                                                                name="wpforms[fields][14]">
+                                                                                name="wpforms[fields][14]"
+                                                                                value="@Model.Request.HairColors">
                                                                             <option value="" selected></option>
                                                                             <option value="B">Brown</option>
                                                                             <option value="K">Black</option>
@@ -5028,7 +5036,7 @@
                                                                                for="wpforms-1121-field_4">Sex</label>
                                                                         <select name="Sex" id="wpforms-1121-field_4"
                                                                                 class="wpforms-field-small"
-                                                                                >
+                                                                                value="@Model.Request.Sex">
                                                                             <option value="" selected></option>
                                                                             <option value="M">Male</option>
                                                                             <option value="F">Female</option>
@@ -5042,7 +5050,8 @@
                                                                                for="wpforms-1121-field_11">Estimated Stature</label>
                                                                         <select id="wpforms-1121-field_11"
                                                                                 class="wpforms-field-small"
-                                                                                name="EstimateStature">
+                                                                                name="EstimateStature"
+                                                                                value="@Model.Request.EstimateStature">
                                                                             <option value="" selected></option>
                                                                             <option value="Heavy">Heavy</option>
                                                                             <option value="None">None</option>
@@ -5056,7 +5065,8 @@
                                                                                for="wpforms-1121-field_12">Burial ID</label><input type="text"
                                                                                                                                    id="wpforms-1121-field_12"
                                                                                                                                    class="wpforms-field-small"
-                                                                                                                                   name="wpforms[fields][12]" />
+                                                                                                                                   name="wpforms[fields][12]"
+                                                                                                                                   value="@Model.Request.BurialId"/>
                                                                     </div>
                                                                     <div id="wpforms-1121-field_13-container"
                                                                          class="wpforms-field wpforms-field-checkbox"
@@ -5068,7 +5078,8 @@
                                                                                 <input type="checkbox"
                                                                                        id="wpforms-1121-field_13_1"
                                                                                        name="wpforms[fields][13][]"
-                                                                                       value="Checked" /><label class="wpforms-field-label-inline"
+                                                                                       value="Checked"
+                                                                                       /><label class="wpforms-field-label-inline"
                                                                                                                 for="wpforms-1121-field_13_1"></label>
                                                                             </li>
                                                                         </ul>

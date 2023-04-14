@@ -4823,9 +4823,10 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
+                                                                    </div>
+                                    </div>
+                                </div>
+
                       <style>
                         .row {
                           display: flex;
@@ -4852,7 +4853,7 @@
                           height: 34px;
                         }
                       </style>
-                        <form>
+                        <form method="post">
                             <div class="row">
                                 <div class="col">
                                     <label for="input1">West to Head</label>
@@ -4894,18 +4895,24 @@
                                 <button type="submit">Submit</button>
                             </div>
                             <br /><br />
-                        </form>                    
-                    </section>
-                  </div>
-                </div>
-                <!-- .entry-content .clear -->
-              </article>
-              <!-- #post-## -->
+                        </form> 
+                        <div style="text-align:center">
+                            <p>Your Analysis Result:</p>
+                            <p>Head direction: @Model.PredictedValue.PredictedValue</p>
+                        </div>
+
+                        <br />
+                            </section>
+                        </div>
+                    </div>
+                    <!-- .entry-content .clear -->
+                </article>
+                <!-- #post-## -->
             </main>
             <!-- #main -->
-          </div>
-          <!-- #primary -->
         </div>
-        <!-- ast-container -->
-      </div>
-      <!-- #content -->
+        <!-- #primary -->
+    </div>
+    <!-- ast-container -->
+</div>
+<!-- #content -->
