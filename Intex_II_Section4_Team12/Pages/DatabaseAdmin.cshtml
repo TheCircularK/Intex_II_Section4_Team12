@@ -4828,6 +4828,30 @@
                         .centercss{
                             text-align:center;
                         }
+                        .table-containter{
+                            overflow-x: auto;
+                        }
+                        .tablewidth{
+                            border-collapse: collapse;
+                            width: 500%;
+                        }
+                        table{
+                            table-layout:fixed;
+                            border-collapse: collapse;
+                            width: 500%;
+                                        overflow-x: auto;
+                        }
+                        th, td {
+                            border: 1px solid #ddd;
+                            padding: 8px;
+                            text-align: left;
+                            overflow-x: auto;
+                        }
+
+                        th {
+                            background-color: #f2f2f2;
+                        }
+
                       </style>
                       <form method="get" action="/Create">
                         <div class="centercss">
@@ -4835,7 +4859,8 @@
                         </div>
                         </form>
                         <br />
-                        <table class="table">
+                        <div class="table-container">
+                        <table class="table tablewidth">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -4950,7 +4975,7 @@
                                         <td>
                                             <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a><br />
                                             <a asp-page="./Details" asp-route-id="@item.Id">Details</a><br />
-                                            <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a><br />
+                                                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a><br />
                                         </td>
                                         <td>
                                             @Html.DisplayFor(modelItem => item.Squarenorthsouth)
@@ -5058,6 +5083,7 @@
                                 }
                             </tbody>
                         </table>
+                        </div>
                     </section>
                   </div>
                 </div>
