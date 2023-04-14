@@ -1,6 +1,5 @@
 using Intex_II_Section4_Team12.Context;
 using Intex_II_Section4_Team12.Data;
-using Intex_II_Section4_Team12.Models;
 using Intex_II_Section4_Team12.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http.Json;
@@ -47,9 +46,6 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 
 builder.Services.AddScoped<IMummyRepository, MummyRepository>();
 builder.Services.AddScoped<IRecordRepository, RecordRepository>();
-builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
-
-builder.Services.AddScoped<MyApiRequestData>();
 
 // Cookie Policy
 builder.Services.Configure<CookiePolicyOptions>(options =>
