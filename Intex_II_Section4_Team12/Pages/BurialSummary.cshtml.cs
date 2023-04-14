@@ -9,7 +9,7 @@ namespace Intex_II_Section4_Team12.Pages
     {
         private IMummyRepository? _repo;
         public FilteredRecordsWithPages Records { get; set; }
-        private FilteredRecordRequest _request = new FilteredRecordRequest(1);
+        public FilteredRecordRequest Request = new FilteredRecordRequest(1);
 
         public BurialSummaryModel(IMummyRepository temp)
         {
@@ -18,69 +18,69 @@ namespace Intex_II_Section4_Team12.Pages
 
         public void OnGet(int pageNum = 1)
         {
-            _request.PageNum = pageNum;
-            Records = _repo.GetFiltered(_request);
+            Request.PageNum = pageNum;
+            Records = _repo.GetFiltered(Request);
         }
 
         public IActionResult OnPost()
         {
-            _request.Sex = Request.Form["Sex"];
+            Request.Sex = base.Request.Form["Sex"];
             
-            string MinBur = Request.Form["MinBurialDepth"];
+            string MinBur = base.Request.Form["MinBurialDepth"];
             
             if (MinBur != null && MinBur != "")
             {
-                _request.MinBurialDepth = float.Parse(MinBur);
+                Request.MinBurialDepth = float.Parse(MinBur);
             }
             else
             {
-                _request.MinBurialDepth = null;
+                Request.MinBurialDepth = null;
             }
 
-            string MaxBur = Request.Form["MaxBurialDepth"];
+            string MaxBur = base.Request.Form["MaxBurialDepth"];
 
             if (MaxBur != null && MaxBur != "")
             {
-                _request.MaxBurialDepth = float.Parse(MaxBur);
+                Request.MaxBurialDepth = float.Parse(MaxBur);
             }
             else
             {
-                _request.MaxBurialDepth = null;
+                Request.MaxBurialDepth = null;
             }
 
-            _request.EstimateStature = Request.Form["EstimateStature"];
-            _request.AgeAtDeath = Request.Form["AgeAtDeath"].ToList();
-            _request.HeadDirection = Request.Form["HeadDirection"];
-            _request.BurialId = Request.Form["BurialId"];
-            _request.HairColors = Request.Form["HairColors"].ToList();
+            Request.EstimateStature = base.Request.Form["EstimateStature"];
+            Request.AgeAtDeath = base.Request.Form["AgeAtDeath"].ToList<string>();
+            Request.HeadDirection = base.Request.Form["HeadDirection"];
+            Request.BurialId = base.Request.Form["BurialId"];
+            Request.HairColors = base.Request.Form["HairColors"].ToList<string>();
 
-            string faceBox = Request.Form["FaceBundles"];
+            string faceBox = base.Request.Form["FaceBundles"];
             if (faceBox == "Checked")
             {
-                _request.FaceBundles = "Y";
+                Request.FaceBundles = "Y";
             }
             else
             {
-                _request.FaceBundles = null;
+                Request.FaceBundles = null;
             }
 
-            _request.TextileStructure = Request.Form["TextileStructure"];
-            _request.TextileColor = Request.Form["TextileColor"];
-            _request.TextileFunction = Request.Form["TextileFunction"];
+            Request.TextileStructure = base.Request.Form["TextileStructure"];
+            Request.TextileColor = base.Request.Form["TextileColor"];
+            Request.TextileFunction = base.Request.Form["TextileFunction"];
             //Make sure this is a boolean select
-            string ribbonBox = Request.Form["ContainsRibbons"];
+            string ribbonBox = base.Request.Form["ContainsRibbons"];
 
             if (ribbonBox == "Checked")
             {
-                _request.ContainsRibbons = true;
+                Request.ContainsRibbons = true;
             }
             else
             {
-                _request.ContainsRibbons = null;
+                Request.ContainsRibbons = null;
             }
             
 
-            Records = _repo.GetFiltered(_request);
+            Records = _repo.GetFiltered(Request);
 
             return Page();
         }
