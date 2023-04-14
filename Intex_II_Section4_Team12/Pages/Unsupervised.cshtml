@@ -1,6 +1,10 @@
 ﻿@page
 @model Intex_II_Section4_Team12.Pages.UnsupervisedModel
+@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment HostingEnvironment
 @{
+    string htmlFilePath = "wwwroot/unsupervised.html";  //Edit this file path to the file path to your html file
+    string htmlContent = System.IO.File.ReadAllText(htmlFilePath);
 }
 
 @section Head {
@@ -4657,7 +4661,17 @@
                                 >
                                   Unsupervised Analysis
                                 </h2>
+                                <br />
+                                <div>
+                                    @Html.Raw(htmlContent)
+                                </div>
+                                                    <p>
+                                                        Above is a clustering model that has been used to explore the relationship between femur length, the westward direction of the head, and the depth of a mummy's burial spot. The model suggests that the overall femur length does not vary based on the depth of the burial spot, which is taken to indicate the time of death for the mummy - deeper burial spots are thought to indicate earlier deaths. This finding implies that the femur length, and specifically the mummy's overall length, did not change over time.
+
+                                                        Furthermore, the model indicates that the westward direction in which the mummy was buried also remained consistent over time. Based on these results, it appears that there is no evidence to support the notion that femur length or burial direction changed over time for these mummies. However, without additional details about the clustering model and data, it's difficult to verify the accuracy of these findings.
+                                                    </p>
                               </div>
+                              <br />
                             </div>
                             <div
                               class="elementor-element elementor-element-b5333ba elementor-widget-divider--view-line elementor-widget elementor-widget-divider"

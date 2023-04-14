@@ -4,6 +4,22 @@
     ViewData["Title"] = "Recovery code verification";
 }
 
+@section Head {
+    <partial name="_StylesPartial" />
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<style>
+    .centercss {
+        text-align: center;
+    }
+</style>
+
+<div class="centercss">
 <h1>@ViewData["Title"]</h1>
 <hr />
 <p>
@@ -19,9 +35,12 @@
                 <label asp-for="Input.RecoveryCode" class="form-label"></label>
                 <span asp-validation-for="Input.RecoveryCode" class="text-danger"></span>
             </div>
+            <br />
             <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+            <br /><br />
         </form>
     </div>
+</div>
 </div>
 
 @section Scripts {

@@ -12,17 +12,19 @@
     .accountcss{
         margin-left: 40%;
     }
+    .centercss{
+        text-align:center;
+    }
 </style>
 <br />
 <br />
 <br />
 <br />
-<h1>@ViewData["Title"]</h1>
 
 <div class="row">
     <div class="col-md-4">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
+            <h2 class="centercss">Create a new account.</h2>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="accountcss">
@@ -46,6 +48,7 @@
             <br />
             <div class="buttonposition">
                 <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+                <br /><br />
                 </div>
             </div>
         </form>
