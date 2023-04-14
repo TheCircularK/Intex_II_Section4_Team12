@@ -1,15 +1,18 @@
 using Intex_II_Section4_Team12.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Build.Framework;
 using Newtonsoft.Json;
+using NuGet.Protocol;
+using System.IO;
 
 namespace Intex_II_Section4_Team12.Pages
 {
     public class SupervisedModel : PageModel
     {
         private MyApiRequestData ApiData { get; set; }
-        public string? JsonData { get; set; }
+        public ApiResponse PredictedValue { get; set; } = new ApiResponse() { PredictedValue = "" };
         public SupervisedModel(MyApiRequestData temp)
         {
             ApiData = temp;
@@ -74,11 +77,25 @@ namespace Intex_II_Section4_Team12.Pages
                 // Convert the JSON request data to a JSON string
                 var requestDataJson = JsonConvert.SerializeObject(ApiData);
 
+                JsonSerializer serializer = new();
+
                 using (var client = new HttpClient())
                 {
-                    var response = await client.GetAsync("https://example.com/api/data");
+                    var response = await client.PostAsJsonAsync("https://5y4yyg32va4dikvn7mviumypha0szwce.lambda-url.us-east-1.on.aws/", requestDataJson);
                     var content = await response.Content.ReadAsStringAsync();
-                    JsonData = content;
+
+                    var contentStream = await response.Content.ReadAsStreamAsync();
+                    using var streamReader = new StreamReader(contentStream);
+                    using var jsonReader = new JsonTextReader(streamReader);
+                    
+                    try
+                    {
+                        PredictedValue = serializer.Deserialize<ApiResponse>(jsonReader);
+                    }
+                    catch
+                    {
+                        PredictedValue = new ApiResponse() { PredictedValue = "An error occurred. Please try again." };
+                    }
                 }
                 return Page();
             }
@@ -87,5 +104,10 @@ namespace Intex_II_Section4_Team12.Pages
                 return Page();
             }
         }
+    }
+
+    public class ApiResponse
+    {
+        public string? PredictedValue { get; set; }
     }
 }
