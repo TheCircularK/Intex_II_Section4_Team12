@@ -9,6 +9,7 @@ using Intex_II_Section4_Team12.Context;
 using Intex_II_Section4_Team12.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
+using Intex_II_Section4_Team12.Repositories;
 
 namespace Intex_II_Section4_Team12.Pages
 {
@@ -16,13 +17,17 @@ namespace Intex_II_Section4_Team12.Pages
     public class DetailsModel : PageModel
     {
         private readonly Intex_II_Section4_Team12.Context.MummyContext _context;
+        private IPhotoRepository _photoRepo;
+        public string? BurialNumberId { get; set; }
+        public ICollection<string?> PhotoNames { get; set; }
 
-        public DetailsModel(Intex_II_Section4_Team12.Context.MummyContext context)
+        public DetailsModel(Intex_II_Section4_Team12.Context.MummyContext context, IPhotoRepository temp)
         {
             _context = context;
+            _photoRepo = temp;
         }
 
-      public Burialmain Burialmain { get; set; } = default!; 
+        public Burialmain Burialmain { get; set; } = default!; 
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -38,6 +43,8 @@ namespace Intex_II_Section4_Team12.Pages
             }
             else 
             {
+                BurialNumberId = burialmain.Squarenorthsouth + burialmain.Northsouth + burialmain.Squareeastwest + burialmain.Eastwest + burialmain.Area + burialmain.Burialnumber;
+                PhotoNames = _photoRepo.Photos(BurialNumberId);
                 Burialmain = burialmain;
             }
             return Page();

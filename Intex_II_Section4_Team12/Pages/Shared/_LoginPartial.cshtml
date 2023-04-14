@@ -4,6 +4,14 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
+
+
+    <style>
+        .badbutton{
+            all: unset;
+            color:black;
+        }
+    </style>
     <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
         <div class="ast-builder-layout-element site-header-focus-item ast-header-account"
                 data-section="section-header-account">
@@ -11,7 +19,7 @@
                 <a class="ast-header-account-link ast-header-account-type-text ast-account-action-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Account</a>
                 <span>&nbsp;|&nbsp;</span>
                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                    <button type="submit" class="ast-header-account-link ast-header-account-type-text ast-account-action-link">Logout</button>
+                    <button type="submit" class="ast-header-account-link ast-header-account-type-text ast-account-action-link badbutton">Logout</button>
                 </form>
             </div>
         </div>
