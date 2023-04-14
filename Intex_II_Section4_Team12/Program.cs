@@ -40,7 +40,6 @@ var mummyConnectionString = builder.Configuration.GetConnectionString("MummyConn
 builder.Services.AddDbContext<MummyContext>(options =>
     options.UseNpgsql(mummyConnectionString));
 
-
 //Scoped services
 builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
